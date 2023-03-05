@@ -1,3 +1,5 @@
+import "./index.css"
+
 function ChargeStation({scoreType, getScore, incrementScore}) {
     let increment = (getScore(scoreType) == 2) ? -2 : 1
     let buttonColor; 
@@ -10,7 +12,7 @@ function ChargeStation({scoreType, getScore, incrementScore}) {
         buttonColor = "grey"
         stationStatus = "Docked"
     } else if (getScore(scoreType) == 2) {
-        buttonCOlor = "green"
+        buttonColor = "green"
         stationStatus = "Balanced"
     }
 

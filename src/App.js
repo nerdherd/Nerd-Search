@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Teleop from './Teleop.js'
 import Auto from './Auto.js'
+import "./index.css"
 
 function App() {
   const [scores, setScores] = useState([
