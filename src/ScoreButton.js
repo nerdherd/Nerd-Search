@@ -1,3 +1,10 @@
+/* TODO: 
+  - Restructure code so that state modification is done in ScoreButton.js 
+  - Rename to Score.js 
+  - Change to class component
+  - ChargeStation.js and Gamepiece.js be seperate class components that both extend from Score.js
+*/
+
 function ScoreButton({scoreType, getScore, incrementScore}) {
   return (
     <>

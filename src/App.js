@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Teleop from './Teleop.js'
 import Auto from './Auto.js'
 import "./index.css"
+import ScouterInfo from "./ScouterInfo.js";
 
 function App() {
   const [scores, setScores] = useState([
@@ -66,6 +67,11 @@ function App() {
     }
   ])
 
+  const [scouterInfo, setScouterInfo] = useState({
+    name: "",
+    matchNumber: 0
+  })
+
   // change 
   function incrementScore(scoreType, increment) {
     let newScoreObject = scores.map(score => {
@@ -88,6 +94,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+          <Route path='/' element={<ScouterInfo scouterInfo={scouterInfo} setScouterInfo={setScouterInfo}/>} />
           <Route path="/autonomous" element={<Auto getScore={getScore} incrementScore={incrementScore}/>} />
           <Route path="/teleop" element={<Teleop getScore={getScore} incrementScore={incrementScore}/>} />
       </Routes>
