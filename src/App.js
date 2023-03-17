@@ -9,51 +9,27 @@ import FormComplete from "./Pages/FormComplete.js";
 function App() {
   const [scores, setScores] = useState([
     {
-      scoreType: "Cone High Auto",
+      scoreType: "High Auto",
       scoreValue: 0,
     },
     {
-      scoreType: "Cone Mid Auto",
+      scoreType: "Mid Auto",
       scoreValue: 0,
     },
     {
-      scoreType: "Cone Low Auto",
+      scoreType: "Low Auto",
       scoreValue: 0,
     },
     {
-      scoreType: "Cube High Auto",
+      scoreType: "High Teleop",
       scoreValue: 0,
     },
     {
-      scoreType: "Cube Mid Auto",
+      scoreType: "Mid Teleop",
       scoreValue: 0,
     },
     {
-      scoreType: "Cube Low Auto",
-      scoreValue: 0,
-    },
-    {
-      scoreType: "Cone High Teleop",
-      scoreValue: 0,
-    },
-    {
-      scoreType: "Cone Mid Teleop",
-      scoreValue: 0,
-    },
-    {
-      scoreType: "Cone Low Teleop",
-      scoreValue: 0,
-    },
-    {
-      scoreType: "Cube High Teleop",
-      scoreValue: 0,
-    },
-    {
-      scoreType: "Cube Mid Teleop",
-      scoreValue: 0,
-    },
-    {
-      scoreType: "Cube Low Teleop",
+      scoreType: "Low Teleop",
       scoreValue: 0,
     },
 
@@ -88,51 +64,27 @@ function App() {
 
   const initialScoreState = [
     {
-      scoreType: "Cone High Auto",
+      scoreType: "High Auto",
       scoreValue: 0,
     },
     {
-      scoreType: "Cone Mid Auto",
+      scoreType: "Mid Auto",
       scoreValue: 0,
     },
     {
-      scoreType: "Cone Low Auto",
+      scoreType: "Low Auto",
       scoreValue: 0,
     },
     {
-      scoreType: "Cube High Auto",
+      scoreType: "High Teleop",
       scoreValue: 0,
     },
     {
-      scoreType: "Cube Mid Auto",
+      scoreType: "Mid Teleop",
       scoreValue: 0,
     },
     {
-      scoreType: "Cube Low Auto",
-      scoreValue: 0,
-    },
-    {
-      scoreType: "Cone High Teleop",
-      scoreValue: 0,
-    },
-    {
-      scoreType: "Cone Mid Teleop",
-      scoreValue: 0,
-    },
-    {
-      scoreType: "Cone Low Teleop",
-      scoreValue: 0,
-    },
-    {
-      scoreType: "Cube High Teleop",
-      scoreValue: 0,
-    },
-    {
-      scoreType: "Cube Mid Teleop",
-      scoreValue: 0,
-    },
-    {
-      scoreType: "Cube Low Teleop",
+      scoreType: "Low Teleop",
       scoreValue: 0,
     },
 

@@ -25,9 +25,9 @@ function Auto({getScore, incrementScore, completedForms, setCompletedForms}) {
     return (
         <div className='mainDiv'>
             <div className='cone'>
-                <ScoreButton scoreType="Cone High Auto" getScore={getScore} incrementScore={incrementScore}></ScoreButton>
-                <ScoreButton scoreType="Cone Mid Auto" getScore={getScore} incrementScore={incrementScore}></ScoreButton>
-                <ScoreButton scoreType="Cone Low Auto" getScore={getScore} incrementScore={incrementScore}></ScoreButton>            
+                <ScoreButton scoreType="High Auto" getScore={getScore} incrementScore={incrementScore}></ScoreButton>
+                <ScoreButton scoreType="Mid Auto" getScore={getScore} incrementScore={incrementScore}></ScoreButton>
+                <ScoreButton scoreType="Low Auto" getScore={getScore} incrementScore={incrementScore}></ScoreButton>            
             </div>
             <ChargeStation scoreType="Charge Station Auto" getScore={getScore} incrementScore={incrementScore}></ChargeStation>
             <button type='submit' onClick={handleSubmit}>Teleop Started</button>

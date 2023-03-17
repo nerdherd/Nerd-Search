@@ -29,8 +29,6 @@ function ScouterInfo({scouterInfo, setScouterInfo, completedForms, setCompletedF
                 scouterInfo: true
             })
         }
-
-
     }
     
     return (
