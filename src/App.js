@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Teleop from './Teleop.js'
-import Auto from './Auto.js'
+import Teleop from './Pages/Teleop.js'
+import Auto from './Pages/Auto.js'
 import "./index.css"
-import ScouterInfo from "./ScouterInfo.js";
+import ScouterInfo from "./Pages/ScouterInfo.js";
+import FormComplete from "./Pages/FormComplete.js";
 
 function App() {
   const [scores, setScores] = useState([
@@ -68,9 +69,81 @@ function App() {
   ])
 
   const [scouterInfo, setScouterInfo] = useState({
-    name: "",
-    matchNumber: 0
+    username: "",
+    matchNumber: 0,
+    teamNumber: 0
   })
+
+  const initialScouterInfoState = {
+    username: "",
+    matchNumber: 0
+  }
+
+  const initialScoreState = [
+    {
+      scoreType: "Cone High Auto",
+      scoreValue: 0,
+    },
+    {
+      scoreType: "Cone Mid Auto",
+      scoreValue: 0,
+    },
+    {
+      scoreType: "Cone Low Auto",
+      scoreValue: 0,
+    },
+    {
+      scoreType: "Cube High Auto",
+      scoreValue: 0,
+    },
+    {
+      scoreType: "Cube Mid Auto",
+      scoreValue: 0,
+    },
+    {
+      scoreType: "Cube Low Auto",
+      scoreValue: 0,
+    },
+    {
+      scoreType: "Cone High Teleop",
+      scoreValue: 0,
+    },
+    {
+      scoreType: "Cone Mid Teleop",
+      scoreValue: 0,
+    },
+    {
+      scoreType: "Cone Low Teleop",
+      scoreValue: 0,
+    },
+    {
+      scoreType: "Cube High Teleop",
+      scoreValue: 0,
+    },
+    {
+      scoreType: "Cube Mid Teleop",
+      scoreValue: 0,
+    },
+    {
+      scoreType: "Cube Low Teleop",
+      scoreValue: 0,
+    },
+
+    // 0 is undocked, 1 is docked, 2 is engaged
+    {
+      scoreType: "Charge Station Auto",
+      scoreValue: 0
+    },
+    {
+      scoreType: "Charge Station Endgame",
+      scoreValue: 0
+    }
+  ]
+
+  const resetStates = () => {
+    setScores(initialScoreState)
+    setScouterInfo(initialScouterInfoState)
+  }
 
   // change 
   function incrementScore(scoreType, increment) {
@@ -97,6 +170,7 @@ function App() {
           <Route path='/' element={<ScouterInfo scouterInfo={scouterInfo} setScouterInfo={setScouterInfo}/>} />
           <Route path="/autonomous" element={<Auto getScore={getScore} incrementScore={incrementScore}/>} />
           <Route path="/teleop" element={<Teleop getScore={getScore} incrementScore={incrementScore}/>} />
+          <Route path="/formComplete" element={<FormComplete matchNumber={scouterInfo.matchNumber} teamNumber={scouterInfo.teamNumber} resetStates={resetStates}/>}></Route>
       </Routes>
     </BrowserRouter>
   )

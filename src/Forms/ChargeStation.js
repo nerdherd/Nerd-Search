@@ -1,4 +1,4 @@
-import "./index.css"
+import "../index.css"
 
 function ChargeStation({scoreType, getScore, incrementScore}) {
     let increment = (getScore(scoreType) == 2) ? -2 : 1
