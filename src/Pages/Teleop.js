@@ -22,7 +22,7 @@ function Teleop({getScore, incrementScore, completedForms, setCompletedForms}) {
             ...completedForms,
             teleop: true
         })
-        navigate('/formComplete')
+        navigate('/matchinfo')
     }
 
     return (
@@ -33,7 +33,7 @@ function Teleop({getScore, incrementScore, completedForms, setCompletedForms}) {
                 <ScoreButton scoreType="Low Teleop" getScore={getScore} incrementScore={incrementScore}></ScoreButton>        
             </div>
             <ChargeStation scoreType="Charge Station Endgame" getScore={getScore} incrementScore={incrementScore}></ChargeStation>
-            <button type='submit' onClick={handleSubmit}>Submit Scouting Form</button>
+            <button type='submit' onClick={handleSubmit}>Match Info</button>
         </div>
     )    
 }

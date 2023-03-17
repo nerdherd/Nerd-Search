@@ -5,6 +5,7 @@ import Auto from './Pages/Auto.js'
 import "./index.css"
 import ScouterInfo from "./Pages/ScouterInfo.js";
 import FormComplete from "./Pages/FormComplete.js";
+import MatchInfo from "./Pages/MatchInfo.js";
 
 function App() {
   const [scores, setScores] = useState([
@@ -54,7 +55,20 @@ function App() {
     scouterInfo: false,
     autonmous: false,
     teleop: false,
+    matchInfo: false
   })
+
+  const [matchInfo, setMatchInfo] = useState({
+    driver: '',
+    penalty: '',
+    focus: '',
+  })
+
+  const initialMatchInfoState = {
+    driver: '',
+    penalty: '',
+    focus: '',
+  }
 
   const initialScouterInfoState = {
     username: "",
@@ -103,12 +117,14 @@ function App() {
     scouterInfo: false,
     autonmous: false,
     teleop: false,
+    matchInfo: false
   }
 
   const resetStates = () => {
     setScores(initialScoreState)
     setScouterInfo(initialScouterInfoState)
     setCompletedForms(initialCompletedForms)
+    setMatchInfo(initialMatchInfoState)
   }
 
   // change 
@@ -137,6 +153,7 @@ function App() {
           <Route path="/autonomous" element={<Auto getScore={getScore} incrementScore={incrementScore} completedForms={completedForms} setCompletedForms={setCompletedForms}/>}  />
           <Route path="/teleop" element={<Teleop getScore={getScore} incrementScore={incrementScore} setCompletedForms={setCompletedForms} completedForms={completedForms}/>}  />
           <Route path="/formComplete" element={<FormComplete matchNumber={scouterInfo.matchNumber} teamNumber={scouterInfo.teamNumber}  resetStates={resetStates}/>}></Route>
+          <Route path='/matchInfo' element={<MatchInfo matchInfo={matchInfo} setMatchInfo={setMatchInfo} completedForms={completedForms} setCompletedForms={setCompletedForms}/>} />
       </Routes>
     </BrowserRouter>
   )
