@@ -1,12 +1,24 @@
 import ChargeStation from "../Forms/ChargeStation.js";
 import ScoreButton from "../Forms/ScoreButton.js"
-import { useNavigate } from "react-router-dom";
+import { redirect, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
-function Auto({getScore, incrementScore}) {
+function Auto({getScore, incrementScore, completedForms, setCompletedForms}) {
     const navigate = useNavigate()
+
+    useEffect(() => {
+        if (completedForms.scouterInfo !== true) {
+            navigate('/scouterInfo')
+        }
+    })
+
 
     function handleSubmit(event) {
         event.preventDefault()
+        setCompletedForms({
+            ...completedForms,
+            autonomous: true
+        })
         navigate('/teleop')
     }
 

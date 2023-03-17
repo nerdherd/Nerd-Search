@@ -70,13 +70,20 @@ function App() {
 
   const [scouterInfo, setScouterInfo] = useState({
     username: "",
-    matchNumber: 0,
-    teamNumber: 0
+    matchNumber: "",
+    teamNumber: ""
+  })
+
+  const [completedForms, setCompletedForms] = useState({
+    scouterInfo: false,
+    autonmous: false,
+    teleop: false,
   })
 
   const initialScouterInfoState = {
     username: "",
-    matchNumber: 0
+    matchNumber: "",
+    teamNumber: ""
   }
 
   const initialScoreState = [
@@ -140,9 +147,16 @@ function App() {
     }
   ]
 
+  const initialCompletedForms = {
+    scouterInfo: false,
+    autonmous: false,
+    teleop: false,
+  }
+
   const resetStates = () => {
     setScores(initialScoreState)
     setScouterInfo(initialScouterInfoState)
+    setCompletedForms(initialCompletedForms)
   }
 
   // change 
@@ -167,9 +181,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-          <Route path='/' element={<ScouterInfo scouterInfo={scouterInfo} setScouterInfo={setScouterInfo}/>} />
-          <Route path="/autonomous" element={<Auto getScore={getScore} incrementScore={incrementScore}/>} />
-          <Route path="/teleop" element={<Teleop getScore={getScore} incrementScore={incrementScore}/>} />
+          <Route path='/scouterInfo' element={<ScouterInfo scouterInfo={scouterInfo} setScouterInfo={setScouterInfo} completedForms={completedForms} setCompletedForms={setCompletedForms}/>} />
+          <Route path="/autonomous" element={<Auto getScore={getScore} incrementScore={incrementScore} completedForms={completedForms} setCompletedForms={setCompletedForms}/>}  />
+          <Route path="/teleop" element={<Teleop getScore={getScore} incrementScore={incrementScore} setCompletedForms={setCompletedForms} completedForms={completedForms}/>}  />
           <Route path="/formComplete" element={<FormComplete matchNumber={scouterInfo.matchNumber} teamNumber={scouterInfo.teamNumber} resetStates={resetStates}/>}></Route>
       </Routes>
     </BrowserRouter>

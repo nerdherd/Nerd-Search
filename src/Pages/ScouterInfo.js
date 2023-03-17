@@ -1,7 +1,10 @@
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
-function ScouterInfo({scouterInfo, setScouterInfo}) {
+function ScouterInfo({scouterInfo, setScouterInfo, completedForms, setCompletedForms}) {
     
+    const [error, setError] = useState(null)
+
     const navigate = useNavigate();
     
     function handleChange(event) {
@@ -13,7 +16,21 @@ function ScouterInfo({scouterInfo, setScouterInfo}) {
     
     function handleSubmit(event) {
         event.preventDefault()
-        navigate('/autonomous')
+
+        // check if fields are empty first
+
+        if (scouterInfo.username == '' || scouterInfo.matchNumber == '' || scouterInfo.teamNumber == '') {
+            setError('Enter valid fields')
+        } else {
+            setError('')
+            navigate('/autonomous')       
+            setCompletedForms({
+                ...completedForms,
+                scouterInfo: true
+            })
+        }
+
+
     }
     
     return (
@@ -43,6 +60,7 @@ function ScouterInfo({scouterInfo, setScouterInfo}) {
                 value={scouterInfo.teamNumber}
             ></input>
             <button type='submit' onClick={handleSubmit}>Submit</button>
+            {error !== '' ? <p className='error'>{error}</p> : null}
         </>
     )
 }

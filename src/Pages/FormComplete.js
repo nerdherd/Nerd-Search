@@ -4,12 +4,12 @@ function FormComplete({matchNumber, teamNumber, resetStates}) {
     const navigate = useNavigate()
 
     function handleEdit(event) {
-        navigate('/autonomous')
+        navigate('/scouterInfo')
     }
 
     function handleFinalSubmission() {
         resetStates()
-        navigate('/')
+        navigate('/scouterInfo')
     }
 
     return(
