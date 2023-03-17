@@ -9,7 +9,7 @@
 }
 
 #addScore {
-    background-color: green;
+    background-color: #77dd77;
     color: white;
     font-size: 4vh;
 }
@@ -17,7 +17,7 @@
 #subtractScore {
     color: white;
     font-size: 4vh;
-    background-color: red;
+    background-color: #ff6961;
 }
 
 #scoreTypeLabel {
