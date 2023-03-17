@@ -1,3 +1,7 @@
 .mainDiv {
     text-align: center;
 }
+
+button {
+    border-radius: 12px
+}
