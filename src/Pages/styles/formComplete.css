@@ -1,0 +1,14 @@
+#mainDiv {
+    text-align: center;
+    font-size: 4vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+}
+
+p {
+    width: 80%
+}
