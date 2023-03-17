@@ -1,0 +1,25 @@
+.scoreButton {
+    height: 50%;
+    width: 50%
+}
+
+#scoreButtonDiv {
+    height: 20vh;
+    text-align: center;
+}
+
+#addScore {
+    background-color: green;
+    color: white;
+    font-size: 4vh;
+}
+
+#subtractScore {
+    color: white;
+    font-size: 4vh;
+    background-color: red;
+}
+
+#scoreTypeLabel {
+    font-size: 4vh;
+}

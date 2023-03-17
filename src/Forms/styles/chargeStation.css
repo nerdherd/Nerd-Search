@@ -1,0 +1,17 @@
+#notDocked {
+    background-color: red;
+}
+
+#docked {
+    background-color: grey;
+}
+
+#engaged {
+    background-color: green;
+}
+
+button {
+    width: 80%;
+    height: 8vh;
+    font-size: 4vh;
+}

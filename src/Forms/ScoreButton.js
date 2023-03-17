@@ -5,13 +5,15 @@
   - ChargeStation.js and Gamepiece.js be seperate class components that both extend from Score.js
 */
 
+import './styles/scoreButton.css'
+
 function ScoreButton({scoreType, getScore, incrementScore}) {
   return (
-    <>
-    <p>{scoreType}: {getScore(scoreType)}</p>
-    <button onClick={() => incrementScore(scoreType, -1)}>-</button>
-    <button onClick={() => incrementScore(scoreType, 1)}>+</button>
-    </>
+    <div id='scoreButtonDiv'>
+      <p id='scoreTypeLabel'>{scoreType}: {getScore(scoreType)}</p>
+      <button className='scoreButton' id='subtractScore' onClick={() => incrementScore(scoreType, -1)}>-</button>
+      <button className='scoreButton' id='addScore' onClick={() => incrementScore(scoreType, 1)}>+</button>
+    </div>
   );
 }
 
