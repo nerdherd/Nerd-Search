@@ -1,5 +1,5 @@
 #notDocked {
-    background-color: red;
+    background-color: #ff6961
 }
 
 #docked {
@@ -7,7 +7,7 @@
 }
 
 #engaged {
-    background-color: green;
+    background-color: #77dd77;
 }
 
 button {
