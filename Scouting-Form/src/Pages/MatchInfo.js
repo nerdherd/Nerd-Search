@@ -33,11 +33,10 @@ function MatchInfo({matchInfo, setMatchInfo, completedForms, setCompletedForms})
 
             <p>What role did their robot play throughout the match?</p>
             <div onChange={handleChange} className="radioInput">
-                <input type="radio" value="scorer" name="robotRole" /> Scorer
-                <input type="radio" value="defense" name="robotRole" /> Defense
-                <input type="radio" value="feeder" name="robotRole" /> Feeder
-                <input type="radio" value="noRole" name="robotRole" /> No Role
-                <input type="radio" value="mix" name="robotRole" /> Mix
+                <input type="checkbox" value="scorer" name="robotRole" /> Scorer
+                <input type="checkbox" value="defense" name="robotRole" /> Defense
+                <input type="checkbox" value="feeder" name="robotRole" /> Feeder
+                <input type="checkbox" value="noRole" name="robotRole" /> No Role
             </div>
 
             <p>How good was their driver?</p>
@@ -58,13 +57,13 @@ function MatchInfo({matchInfo, setMatchInfo, completedForms, setCompletedForms})
             <p>Able to Score</p>
 
             <div onChange={handleChange} className="radioInput">
-                <input type="checkbox" value="cube" name="scoreAbility" /> Cube
-                <input type="checkbox" value="cone" name="scoreAbility" /> Cone
+                <input type="checkbox" value="cube" name="scoreAbility" /> Cubes
+                <input type="checkbox" value="cone" name="scoreAbility" /> Cones
                 <input type="checkbox" value="doesn't score" name="scoreAbility" /> Doesn't score
 
             </div>
 
-            <p>Game Piece Focus</p>
+            <p>Focuses on Scoring</p>
 
             <div onChange={handleChange} className="radioInput">
                 <input type="radio" value="cone" name="focus" /> Cone
