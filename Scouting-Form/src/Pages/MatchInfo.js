@@ -55,6 +55,15 @@ function MatchInfo({matchInfo, setMatchInfo, completedForms, setCompletedForms})
                 <input type="radio" value="none" name="penalty" /> None
             </div>
 
+            <p>Able to Score</p>
+
+            <div onChange={handleChange} className="radioInput">
+                <input type="checkbox" value="cube" name="scoreAbility" /> Cube
+                <input type="checkbox" value="cone" name="scoreAbility" /> Cone
+                <input type="checkbox" value="doesn't score" name="scoreAbility" /> Doesn't score
+
+            </div>
+
             <p>Game Piece Focus</p>
 
             <div onChange={handleChange} className="radioInput">
