@@ -67,13 +67,19 @@ function App() {
 
   const [scores, setScores] = useState(initialScoreState)
   
+
+
+  const [scouterInfo, setScouterInfo] = useState({
+    username: '',
+    matchNumber: '',
+    teamNumber: ""
+  })
+  
   const initialScouterInfoState = {
-    username: "",
-    matchNumber: "",
+    username: scouterInfo.username,
+    matchNumber: Number(scouterInfo.matchNumber) + 1,
     teamNumber: ""
   }
-
-  const [scouterInfo, setScouterInfo] = useState(initialScouterInfoState)
 
   const initialCompletedForms = {
     scouterInfo: false,
