@@ -46,6 +46,11 @@ function App() {
       scoreValue: 0,
     },
 
+    {
+      scoreType: "Missed Game Pieces",
+      scoreValue: 0,
+    },
+
     // 0 is undocked, 1 is docked, 2 is engaged
     {
       scoreType: "Charge Station Auto",
