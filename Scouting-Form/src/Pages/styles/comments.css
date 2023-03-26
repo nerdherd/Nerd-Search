@@ -1,8 +1,12 @@
 .inputField {
     width: 80%;
-    display: block;
-    height:10%;
-}
+    height: 10%;
+    padding: 10px;
+    outline: 0;
+    border: 3px solid #1c87c9;
+    background: #d0e2bc;
+    line-height: 20px;
+  }
 
 #scouterComments {
     display: flex;
