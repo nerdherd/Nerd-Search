@@ -25,7 +25,7 @@ function MatchInfo({matchInfo, setMatchInfo, completedForms, setCompletedForms})
             ...completedForms,
             matchInfo: true
         })
-        navigate('/formcomplete')
+        navigate('/comments')
     }
 
     return (
@@ -61,7 +61,7 @@ function MatchInfo({matchInfo, setMatchInfo, completedForms, setCompletedForms})
                 <input type="radio" value="cube" name="focus" /> Cube
             </div>
 
-            <button type='submit' onClick={handleSubmit}>Submit Form</button>
+            <button type='submit' onClick={handleSubmit}>Comments Page</button>
 
         </div>
 
