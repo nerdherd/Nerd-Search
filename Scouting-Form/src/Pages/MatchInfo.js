@@ -48,9 +48,9 @@ function MatchInfo({matchInfo, setMatchInfo, completedForms, setCompletedForms})
             <p>Penalties?</p>
 
             <div onChange={handleChange} className="radioInput">
-                <input type="radio" value="egregious" name="foul" /> Egregious (ie. Red/Yellow Card)
-                <input type="radio" value="some" name="foul" /> Some
-                <input type="radio" value="none" name="foul" /> None
+                <input type="radio" value="egregious" name="penalty" /> Egregious (ie. Red/Yellow Card)
+                <input type="radio" value="some" name="penalty" /> Some
+                <input type="radio" value="none" name="penalty" /> None
             </div>
 
             <p>Game Piece Focus</p>
