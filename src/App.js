@@ -10,6 +10,7 @@ import MatchInfo from "./Pages/MatchInfo.js";
 function App() {
 
   const initialMatchInfoState = {
+    robotRole: '',
     driver: '',
     penalty: '',
     focus: '',

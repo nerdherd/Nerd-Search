@@ -30,6 +30,14 @@ function MatchInfo({matchInfo, setMatchInfo, completedForms, setCompletedForms})
 
     return (
         <div id='mainDiv'> 
+
+            <p>What role did their robot play throughout the match?</p>
+            <div onChange={handleChange} className="radioInput">
+                <input type="radio" value="scorer" name="robotRole" /> Scorer
+                <input type="radio" value="defense" name="robotRole" /> Defense
+                <input type="radio" value="feeder" name="robotRole" /> Feeder
+            </div>
+
             <p>How good was their driver?</p>
             <div onChange={handleChange} className="radioInput">
                 <input type="radio" value="good" name="driver" /> Good
