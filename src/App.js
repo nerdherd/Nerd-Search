@@ -8,61 +8,6 @@ import FormComplete from "./Pages/FormComplete.js";
 import MatchInfo from "./Pages/MatchInfo.js";
 
 function App() {
-  const [scores, setScores] = useState([
-    {
-      scoreType: "High Auto",
-      scoreValue: 0,
-    },
-    {
-      scoreType: "Mid Auto",
-      scoreValue: 0,
-    },
-    {
-      scoreType: "Low Auto",
-      scoreValue: 0,
-    },
-    {
-      scoreType: "High Teleop",
-      scoreValue: 0,
-    },
-    {
-      scoreType: "Mid Teleop",
-      scoreValue: 0,
-    },
-    {
-      scoreType: "Low Teleop",
-      scoreValue: 0,
-    },
-
-    // 0 is undocked, 1 is docked, 2 is engaged
-    {
-      scoreType: "Charge Station Auto",
-      scoreValue: 0
-    },
-    {
-      scoreType: "Charge Station Endgame",
-      scoreValue: 0
-    }
-  ])
-
-  const [scouterInfo, setScouterInfo] = useState({
-    username: "",
-    matchNumber: "",
-    teamNumber: ""
-  })
-
-  const [completedForms, setCompletedForms] = useState({
-    scouterInfo: false,
-    autonmous: false,
-    teleop: false,
-    matchInfo: false
-  })
-
-  const [matchInfo, setMatchInfo] = useState({
-    driver: '',
-    penalty: '',
-    focus: '',
-  })
 
   const initialMatchInfoState = {
     driver: '',
@@ -70,11 +15,7 @@ function App() {
     focus: '',
   }
 
-  const initialScouterInfoState = {
-    username: "",
-    matchNumber: "",
-    teamNumber: ""
-  }
+  const [matchInfo, setMatchInfo] = useState(initialMatchInfoState)
 
   const initialScoreState = [
     {
@@ -113,12 +54,24 @@ function App() {
     }
   ]
 
+  const [scores, setScores] = useState(initialScoreState)
+  
+  const initialScouterInfoState = {
+    username: "",
+    matchNumber: "",
+    teamNumber: ""
+  }
+
+  const [scouterInfo, setScouterInfo] = useState(initialScouterInfoState)
+
   const initialCompletedForms = {
     scouterInfo: false,
     autonmous: false,
     teleop: false,
     matchInfo: false
   }
+
+  const [completedForms, setCompletedForms] = useState(initialCompletedForms)
 
   const resetStates = () => {
     setScores(initialScoreState)
