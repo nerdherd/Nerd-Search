@@ -1,12 +1,14 @@
 #notDocked {
+    width: 50%;
     background-color: #ff6961
 }
 
 #docked {
+    width: 50%;
     background-color: grey;
 }
 
 #engaged {
+    width: 50%;
     background-color: #77dd77;
 }
-

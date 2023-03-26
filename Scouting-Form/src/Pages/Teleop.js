@@ -54,7 +54,7 @@ function Teleop({matchInfo, setMatchInfo, getScore, incrementScore, completedFor
 
         
             <div className="radioInput">
-                <p>Where does the robot intake game pieces?</p>
+                <h4>Where does the robot intake game pieces?</h4>
                 <div onChange={handleChange} >
                     <input type="checkbox" value="floor" name="intakeLocation" /> floor
                     <input type="checkbox" value="singleSubstation" name="intakeLocation" /> single substation
@@ -64,11 +64,17 @@ function Teleop({matchInfo, setMatchInfo, getScore, incrementScore, completedFor
                 </div>
             </div>
 
-            
-            <ChargeStation scoreType="Charge Station Endgame" getScore={getScore} incrementScore={incrementScore}></ChargeStation>
-            <MobilityButton scoreType="Teleop Mobility" getScore={getScore} incrementScore={incrementScore}></MobilityButton>
-            <button type='back' onClick={handleBack}>Back To Autonomous Page</button>
-            <button type='submit' onClick={handleSubmit}>Go To Match Info</button>
+            <div className="mobilityAndDock">
+                <h4>Docking and Mobility Status:</h4>
+                <ChargeStation scoreType="Charge Station Endgame" getScore={getScore} incrementScore={incrementScore}></ChargeStation>
+                <MobilityButton scoreType="Teleop Mobility" getScore={getScore} incrementScore={incrementScore}></MobilityButton>
+            </div>
+
+            <div className="navigation">
+                <p></p>
+                <button type='back' onClick={handleBack}>Back To Autonomous Page</button>
+                <button type='submit' onClick={handleSubmit}>Go To Match Info</button>
+            </div>
         </div>
     )    
 }

@@ -3,6 +3,14 @@
     font-size: 100%;
 }
 
+navigationButton {
+    width: 50%;
+    height: 8vh;
+    color: black;
+    font-size: 3vh;
+    border-radius: 12px
+}
+
 button {
     width: 80%;
     height: 8vh;

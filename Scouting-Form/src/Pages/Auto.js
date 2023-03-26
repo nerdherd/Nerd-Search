@@ -39,10 +39,17 @@ function Auto({getScore, incrementScore, completedForms, setCompletedForms}) {
                 <ScoreButton scoreType="Low Auto" getScore={getScore} incrementScore={incrementScore}></ScoreButton>            
             </div>
             
-            <ChargeStation scoreType="Charge Station Auto" getScore={getScore} incrementScore={incrementScore}></ChargeStation>
-            <MobilityButton scoreType="Auto Mobility" getScore={getScore} incrementScore={incrementScore} isAuto={true}></MobilityButton>
-            <button type='back' onClick={handleBack}>Back To User Info</button>
-            <button type='submit' onClick={handleSubmit}>Go To Teleop Page</button>
+            <div className="mobilityAndDock">
+                <h4>Docking and Mobility Status:</h4>
+                <ChargeStation scoreType="Charge Station Auto" getScore={getScore} incrementScore={incrementScore}></ChargeStation>
+                <MobilityButton scoreType="Auto Mobility" getScore={getScore} incrementScore={incrementScore} isAuto={true}></MobilityButton>
+            </div>
+
+            <div className="navigation">
+                <p></p>
+                <button type='back' onClick={handleBack}>Back To User Info</button>
+                <button type='submit' onClick={handleSubmit}>Go To Teleop Page</button>
+            </div>
         </div>
     )    
 }
