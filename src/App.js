@@ -51,6 +51,17 @@ function App() {
     {
       scoreType: "Charge Station Endgame",
       scoreValue: 0
+    },
+
+    // during auto: 0 is has not left community, 1 is left community
+    // during teleop: 0 is not parked in community, 1 is parked in community
+    {
+      scoreType: "Auto Mobility",
+      scoreValue: 0
+    },
+    {
+      scoreType: "Teleop Mobility",
+      scoreValue: 0
     }
   ]
 

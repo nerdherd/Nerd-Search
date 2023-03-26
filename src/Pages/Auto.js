@@ -1,5 +1,6 @@
 import ChargeStation from "../Forms/ChargeStation.js";
 import ScoreButton from "../Forms/ScoreButton.js"
+import MobilityButton from "../Forms/MobilityButton.js";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import './styles/scoringPages.css'
@@ -29,7 +30,9 @@ function Auto({getScore, incrementScore, completedForms, setCompletedForms}) {
                 <ScoreButton scoreType="Mid Auto" getScore={getScore} incrementScore={incrementScore}></ScoreButton>
                 <ScoreButton scoreType="Low Auto" getScore={getScore} incrementScore={incrementScore}></ScoreButton>            
             </div>
+            
             <ChargeStation scoreType="Charge Station Auto" getScore={getScore} incrementScore={incrementScore}></ChargeStation>
+            <MobilityButton scoreType="Auto Mobility" getScore={getScore} incrementScore={incrementScore} isAuto={true}></MobilityButton>
             <button type='submit' onClick={handleSubmit}>Teleop Started</button>
         </div>
     )    
