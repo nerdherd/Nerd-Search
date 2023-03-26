@@ -36,6 +36,7 @@ function MatchInfo({matchInfo, setMatchInfo, completedForms, setCompletedForms})
                 <input type="radio" value="scorer" name="robotRole" /> Scorer
                 <input type="radio" value="defense" name="robotRole" /> Defense
                 <input type="radio" value="feeder" name="robotRole" /> Feeder
+                <input type="radio" value="noRole" name="robotRole" /> No Role
             </div>
 
             <p>How good was their driver?</p>
