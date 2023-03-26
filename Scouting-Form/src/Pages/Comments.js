@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import './styles/comments.css'
 function Comments({scouterComments, setScouterComments, completedForms, setCompletedForms}) {
     
     const [error, setError] = useState(null)
@@ -31,7 +32,7 @@ function Comments({scouterComments, setScouterComments, completedForms, setCompl
     
     return (
         <div id='scouterComments'>
-            <h1 id='title'>Comments and Criticisms:</h1>
+            <h1 id='title'>Comments and Criticism:</h1>
             <input
                 name = "teleopComments"
                 placeholder="Additional Teleop Comments:"
