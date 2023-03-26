@@ -3,6 +3,7 @@ import MobilityButton from "../Forms/MobilityButton.js";
 import ScoreButton from "../Forms/ScoreButton.js"
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import './styles/scoringPages.css'
 
 function Teleop({matchInfo, setMatchInfo, getScore, incrementScore, completedForms, setCompletedForms}) {
     const navigate = useNavigate()
@@ -36,20 +37,22 @@ function Teleop({matchInfo, setMatchInfo, getScore, incrementScore, completedFor
 
     return (
         <div className="mainDiv">
-            <div className='cone'>
-                <ScoreButton scoreType="High Teleop" getScore={getScore} incrementScore={incrementScore}></ScoreButton>
-                <ScoreButton scoreType="Mid Teleop" getScore={getScore} incrementScore={incrementScore}></ScoreButton>
-                <ScoreButton scoreType="Low Teleop" getScore={getScore} incrementScore={incrementScore} isAuto={false}></ScoreButton>        
+
+            <ScoreButton scoreType="High Teleop" getScore={getScore} incrementScore={incrementScore}></ScoreButton>
+            <ScoreButton scoreType="Mid Teleop" getScore={getScore} incrementScore={incrementScore}></ScoreButton>
+            <ScoreButton scoreType="Low Teleop" getScore={getScore} incrementScore={incrementScore} isAuto={false}></ScoreButton>        
+            
+            <div className="radioInput">
+                <p>Where does the robot intake game pieces?</p>
+                <div onChange={handleChange} >
+                    <input type="checkbox" value="floor" name="intakeLocation" /> floor
+                    <input type="checkbox" value="singleSubstation" name="intakeLocation" /> single substation
+                    <input type="checkbox" value="doubleSubstationD" name="intakeLocation" /> double substation: drop
+                    <input type="checkbox" value="doubleSubstationS" name="intakeLocation" /> double substation: shelf
+                    <input type="checkbox" value="none" name="intakeLocation" /> no intake
+                </div>
             </div>
 
-            <p>Where does the robot intake game pieces?</p>
-            <div onChange={handleChange} className="radioInput">
-                <input type="checkbox" value="floor" name="intakeLocation" /> floor
-                <input type="checkbox" value="singleSubstation" name="intakeLocation" /> single substation
-                <input type="checkbox" value="doubleSubstationD" name="intakeLocation" /> double substation: drop
-                <input type="checkbox" value="doubleSubstationS" name="intakeLocation" /> double substation: shelf
-                <input type="checkbox" value="none" name="intakeLocation" /> no intake
-            </div>
             
             <ChargeStation scoreType="Charge Station Endgame" getScore={getScore} incrementScore={incrementScore}></ChargeStation>
             <MobilityButton scoreType="Teleop Mobility" getScore={getScore} incrementScore={incrementScore}></MobilityButton>

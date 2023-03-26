@@ -1,7 +1,27 @@
 .mainDiv {
     text-align: center;
+    font-size: 100%;
 }
 
 button {
+    width: 80%;
+    height: 8vh;
+    color: black;
+    font-size: 3vh;
     border-radius: 12px
 }
+
+#scoreButtonDiv {
+    height: 15vh;
+    text-align: center;
+}
+
+.radioInput {
+    width: 100%;
+    height: 15vh
+}
+
+p {
+    width: 100% !important
+}
+

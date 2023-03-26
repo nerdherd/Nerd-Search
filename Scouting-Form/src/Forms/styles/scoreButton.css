@@ -3,24 +3,19 @@
     width: 50%
 }
 
-#scoreButtonDiv {
-    height: 20vh;
-    text-align: center;
-}
-
 #addScore {
     background-color: #77dd77;
     color: white;
-    font-size: 4vh;
+    font-size: 100%;
 }
 
 #subtractScore {
     color: white;
-    font-size: 4vh;
+    font-size: 100%;
     background-color: #ff6961;
 }
 
 #scoreTypeLabel {
-    font-size: 4vh;
+    font-size: 100%;
     width: 100%;
 }
