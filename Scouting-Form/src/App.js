@@ -14,6 +14,7 @@ function App() {
     robotRole: '',
     driver: '',
     penalty: '',
+    ability: '',
     focus: '',
   }
 
