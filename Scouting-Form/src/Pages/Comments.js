@@ -15,6 +15,15 @@ function Comments({scouterComments, setScouterComments, completedForms, setCompl
         });
     };
 
+    function handleBack(e) {
+        e.preventDefault()
+        setCompletedForms({
+            ...completedForms,
+            scouterComments: false
+        })
+        navigate('/matchInfo')
+    }
+
     function handleSubmit(event) {
         event.preventDefault()
 
@@ -78,7 +87,8 @@ function Comments({scouterComments, setScouterComments, completedForms, setCompl
                 value={scouterComments.additionalComments}
             ></input>
 
-            <button type='submit' onClick={handleSubmit} id='submitButton'>Submit</button>
+            <button type='back' onClick={handleBack}>Back To Match Info</button>
+            <button type='submit' onClick={handleSubmit} id='submitButton'>Submit Form</button>
             {error !== '' ? <p className='error'>{error}</p> : null}
         </div>
     )

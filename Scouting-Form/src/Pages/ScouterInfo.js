@@ -58,7 +58,7 @@ function ScouterInfo({scouterInfo, setScouterInfo, completedForms, setCompletedF
                 onChange={handleChange}
                 value={scouterInfo.teamNumber}
             ></input>
-            <button type='submit' onClick={handleSubmit} id='submitButton'>Submit</button>
+            <button type='submit' onClick={handleSubmit} id='submitButton'>Submit User Info</button>
             {error !== '' ? <p className='error'>{error}</p> : null}
         </div>
     )

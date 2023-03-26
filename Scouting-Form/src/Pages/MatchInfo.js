@@ -19,6 +19,15 @@ function MatchInfo({matchInfo, setMatchInfo, completedForms, setCompletedForms})
         console.log(matchInfo)
     }
 
+    function handleBack(e) {
+        e.preventDefault()
+        setCompletedForms({
+            ...completedForms,
+            matchInfo: false
+        })
+        navigate('/teleop')
+    }
+    
     function handleSubmit(e) {
         e.preventDefault()
         setCompletedForms({
@@ -70,7 +79,8 @@ function MatchInfo({matchInfo, setMatchInfo, completedForms, setCompletedForms})
                 <input type="radio" value="cube" name="focus" /> Cube
             </div>
 
-            <button type='submit' onClick={handleSubmit}>Comments Page</button>
+            <button type='back' onClick={handleBack}>Back To Teleop Page</button>
+            <button type='submit' onClick={handleSubmit}>Go To Comments Page</button>
 
         </div>
 

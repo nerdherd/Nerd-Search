@@ -25,6 +25,15 @@ function Teleop({matchInfo, setMatchInfo, getScore, incrementScore, completedFor
         })
         console.log(matchInfo)
     }
+
+    function handleBack(e) {
+        e.preventDefault()
+        setCompletedForms({
+            ...completedForms,
+            teleop: false
+        })
+        navigate('/autonomous')
+    }
     
     function handleSubmit(event) {
         event.preventDefault()
@@ -56,7 +65,8 @@ function Teleop({matchInfo, setMatchInfo, getScore, incrementScore, completedFor
             
             <ChargeStation scoreType="Charge Station Endgame" getScore={getScore} incrementScore={incrementScore}></ChargeStation>
             <MobilityButton scoreType="Teleop Mobility" getScore={getScore} incrementScore={incrementScore}></MobilityButton>
-            <button type='submit' onClick={handleSubmit}>Match Info</button>
+            <button type='back' onClick={handleBack}>Back To Autonomous Page</button>
+            <button type='submit' onClick={handleSubmit}>Go To Match Info</button>
         </div>
     )    
 }

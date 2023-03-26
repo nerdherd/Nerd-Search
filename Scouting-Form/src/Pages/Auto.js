@@ -13,6 +13,14 @@ function Auto({getScore, incrementScore, completedForms, setCompletedForms}) {
         }
     })
 
+    function handleBack(e) {
+        e.preventDefault()
+        setCompletedForms({
+            ...completedForms,
+            autonomous: false
+        })
+        navigate('/scouterInfo')
+    }
 
     function handleSubmit(event) {
         event.preventDefault()
@@ -33,7 +41,8 @@ function Auto({getScore, incrementScore, completedForms, setCompletedForms}) {
             
             <ChargeStation scoreType="Charge Station Auto" getScore={getScore} incrementScore={incrementScore}></ChargeStation>
             <MobilityButton scoreType="Auto Mobility" getScore={getScore} incrementScore={incrementScore} isAuto={true}></MobilityButton>
-            <button type='submit' onClick={handleSubmit}>Teleop Started</button>
+            <button type='back' onClick={handleBack}>Back To User Info</button>
+            <button type='submit' onClick={handleSubmit}>Go To Teleop Page</button>
         </div>
     )    
 }
