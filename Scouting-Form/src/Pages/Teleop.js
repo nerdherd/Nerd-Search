@@ -49,8 +49,9 @@ function Teleop({matchInfo, setMatchInfo, getScore, incrementScore, completedFor
 
             <ScoreButton scoreType="High Teleop" getScore={getScore} incrementScore={incrementScore}></ScoreButton>
             <ScoreButton scoreType="Mid Teleop" getScore={getScore} incrementScore={incrementScore}></ScoreButton>
-            <ScoreButton scoreType="Low Teleop" getScore={getScore} incrementScore={incrementScore} isAuto={false}></ScoreButton>        
-            
+            <ScoreButton scoreType="Low Teleop" getScore={getScore} incrementScore={incrementScore}></ScoreButton>        
+
+        
             <div className="radioInput">
                 <p>Where does the robot intake game pieces?</p>
                 <div onChange={handleChange} >
