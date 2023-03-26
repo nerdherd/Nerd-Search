@@ -83,7 +83,7 @@ function App() {
     redFlags: '',
     teleopComments: '',
     uniqueComments: '',
-    autonmousComments: '',
+    autonomousComments: '',
     additionalComments: ""
 
   })
@@ -96,7 +96,7 @@ function App() {
 
   const initialCompletedForms = {
     scouterInfo: false,
-    autonmous: false,
+    autonomous: false,
     teleop: false,
     matchInfo: false
   }
