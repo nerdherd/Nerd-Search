@@ -25,6 +25,24 @@
     font-size: 4vh
 }
 
+#usernameHeader {
+    display: block;
+    text-align: center;
+    font-size: 2vh
+}
+
+#matchNumberHeader {
+    display: block;
+    text-align: center;
+    font-size: 2vh
+}
+
+#teamNumberHeader {
+    display: block;
+    text-align: center;
+    font-size: 2vh
+}
+
 .error {
     color: red;
     display: block;
