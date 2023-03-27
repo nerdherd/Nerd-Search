@@ -48,13 +48,6 @@ function MatchInfo({matchInfo, setMatchInfo, completedForms, setCompletedForms})
                 <input type="checkbox" value="noRole" name="robotRole" /> No Role
             </div>
 
-            <h4>How good was their driver?</h4>
-            <div onChange={handleChange} className="radioInput">
-                <input type="radio" value="good" name="driver" /> Good
-                <input type="radio" value="okay" name="driver" /> Okay
-                <input type="radio" value="bad" name="driver" /> Bad
-            </div>
-
             <h4>Penalties?</h4>
 
             <div onChange={handleChange} className="radioInput">

@@ -12,7 +12,6 @@ function App() {
 
   const initialMatchInfoState = {
     robotRole: '',
-    driver: '',
     penalty: '',
     ability: '',
     focus: '',
@@ -85,6 +84,7 @@ function App() {
   })
 
   const [scouterComments, setScouterComments] = useState({
+    driverComments: '',
     redFlags: '',
     teleopComments: '',
     uniqueComments: '',
