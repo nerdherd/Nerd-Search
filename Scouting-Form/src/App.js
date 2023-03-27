@@ -85,6 +85,7 @@ function App() {
 
   const [scouterComments, setScouterComments] = useState({
     driverComments: '',
+    intakeComments: '',
     redFlags: '',
     teleopComments: '',
     uniqueComments: '',

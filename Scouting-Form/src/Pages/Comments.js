@@ -27,7 +27,7 @@ function Comments({scouterComments, setScouterComments, completedForms, setCompl
     function handleSubmit(event) {
         event.preventDefault()
 
-        if (scouterComments.driverComments == '' || scouterComments.redFlags == '' || scouterComments.teleopComments == '' || scouterComments.uniqueComments == '' || scouterComments.autonomousComments == '' || scouterComments.additionalComments == '') {
+        if (scouterComments.driverComments == '' || scouterComments.intakeComments=='' || scouterComments.redFlags == '' || scouterComments.teleopComments == '' || scouterComments.uniqueComments == '' || scouterComments.autonomousComments == '' || scouterComments.additionalComments == '') {
             setError('Enter valid fields')
         } else {
             setError('')
@@ -42,16 +42,22 @@ function Comments({scouterComments, setScouterComments, completedForms, setCompl
     return (
         <div id='scouterComments'>
             <h1 id='title'>Comments and Criticism:</h1>
-            
             <input
                 name = "driverComments"
-                placeholder="How good was their driver?"
+                placeholder="How good is their driver?"
                 onChange={handleChange}
                 type='text'
                 value={scouterComments.driverComments}
                 className='inputField'
             ></input>
-
+            <input
+                name = "intakeComments"
+                placeholder="How consistent/efficient is their intake?"
+                type='text'
+                onChange={handleChange}
+                className='inputField'
+                value={scouterComments.intakeComments}
+            ></input>
             <input
                 name = "autonomousComments"
                 placeholder="Additional Autonomous Comments:"
