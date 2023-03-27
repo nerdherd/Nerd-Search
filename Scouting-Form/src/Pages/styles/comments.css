@@ -31,43 +31,43 @@
     font-size: 4vh
 }
 
-#driverCommentsheader {
+#driverCommentsHeader {
     display: block;
     text-align: center;
     font-size: 2vh
 }
 
-#intakeCommentsheader {
+#intakeCommentsHeader {
     display: block;
     text-align: center;
     font-size: 2vh
 }
 
-#autonomousCommentsheader {
+#autonomousCommentsHeader {
     display: block;
     text-align: center;
     font-size: 2vh
 }
 
-#teleopCommentsheader {
+#teleopCommentsHeader {
     display: block;
     text-align: center;
     font-size: 2vh
 }
 
-#uniqueCommentsheader {
+#uniqueCommentsHeader {
     display: block;
     text-align: center;
     font-size: 2vh
 }
 
-#redFlagsheader {
+#redFlagsHeader {
     display: block;
     text-align: center;
     font-size: 2vh
 }
 
-#additionalCommentsheader {
+#additionalCommentsHeader {
     display: block;
     text-align: center;
     font-size: 2vh
