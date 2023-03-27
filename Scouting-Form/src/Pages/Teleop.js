@@ -78,8 +78,8 @@ function Teleop({matchInfo, setMatchInfo, getScore, incrementScore, completedFor
 
             <div className="navigation">
                 <p></p>
-                <button type='back' onClick={handleBack}>Back To Autonomous Page</button>
                 <button type='submit' onClick={handleSubmit}>Go To Match Info</button>
+                <button type='back' onClick={handleBack}>Back To Autonomous Page</button>
             </div>
         </div>
     )    

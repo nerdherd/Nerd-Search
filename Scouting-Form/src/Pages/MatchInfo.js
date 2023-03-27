@@ -78,8 +78,8 @@ function MatchInfo({matchInfo, setMatchInfo, completedForms, setCompletedForms})
                 <input type="radio" value="cube" name="focus" /> Cube
             </div>
 
-            <button type='back' onClick={handleBack}>Back To Teleop Page</button>
             <button type='submit' onClick={handleSubmit}>Go To Comments Page</button>
+            <button type='back' onClick={handleBack}>Back To Teleop Page</button>
 
         </div>
 
