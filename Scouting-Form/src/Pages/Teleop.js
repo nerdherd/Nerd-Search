@@ -62,6 +62,12 @@ function Teleop({matchInfo, setMatchInfo, getScore, incrementScore, completedFor
                     <input type="checkbox" value="doubleSubstationS" name="intakeLocation" /> double substation: shelf
                     <input type="checkbox" value="none" name="intakeLocation" /> no intake
                 </div>
+
+                <h4>Does the robot score on the coopertition grid?</h4>
+                <div onChange={handleChange} >
+                    <input type="radio" value="yes" name="gridStatus" /> Yes
+                    <input type="radio" value="no" name="gridStatus" /> No
+                </div>
             </div>
 
             <div className="mobilityAndDock">
