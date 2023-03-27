@@ -8,10 +8,10 @@ function MobilityButton({scoreType, getScore, incrementScore, isAuto}) {
     
     if (getScore(scoreType) == 0) {
         buttonColor = "noMobility"
-        buttonText = ((isAuto)) ? "Stays In Community" : "Outside of Community"
+        buttonText = ((isAuto)) ? "In Community" : "Outside Community"
     } else if (getScore(scoreType) == 1) {
         buttonColor = "hasMobility"
-        buttonText = ((isAuto)) ? "Leaves The Community" : "Parks In Community"
+        buttonText = ((isAuto)) ? "Leaves Community" : "Parked"
     }
 
     return (     
