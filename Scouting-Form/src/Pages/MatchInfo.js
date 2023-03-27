@@ -40,7 +40,7 @@ function MatchInfo({matchInfo, setMatchInfo, completedForms, setCompletedForms})
     return (
         <div id='mainDiv'> 
 
-            <p>What role did their robot play throughout the match?</p>
+            <h4>What role did their robot play throughout the match?</h4>
             <div onChange={handleChange} className="radioInput">
                 <input type="checkbox" value="scorer" name="robotRole" /> Scorer
                 <input type="checkbox" value="defense" name="robotRole" /> Defense
@@ -48,14 +48,14 @@ function MatchInfo({matchInfo, setMatchInfo, completedForms, setCompletedForms})
                 <input type="checkbox" value="noRole" name="robotRole" /> No Role
             </div>
 
-            <p>How good was their driver?</p>
+            <h4>How good was their driver?</h4>
             <div onChange={handleChange} className="radioInput">
                 <input type="radio" value="good" name="driver" /> Good
                 <input type="radio" value="okay" name="driver" /> Okay
                 <input type="radio" value="bad" name="driver" /> Bad
             </div>
 
-            <p>Penalties?</p>
+            <h4>Penalties?</h4>
 
             <div onChange={handleChange} className="radioInput">
                 <input type="radio" value="egregious" name="penalty" /> Egregious (ie. Red/Yellow Card)
@@ -63,16 +63,15 @@ function MatchInfo({matchInfo, setMatchInfo, completedForms, setCompletedForms})
                 <input type="radio" value="none" name="penalty" /> None
             </div>
 
-            <p>Able to Score</p>
+            <h4>Able to Score</h4>
 
             <div onChange={handleChange} className="radioInput">
                 <input type="checkbox" value="cube" name="scoreAbility" /> Cubes
                 <input type="checkbox" value="cone" name="scoreAbility" /> Cones
                 <input type="checkbox" value="doesn't score" name="scoreAbility" /> Doesn't score
-
             </div>
 
-            <p>Focuses on Scoring</p>
+            <h4>Focuses on Scoring</h4>
 
             <div onChange={handleChange} className="radioInput">
                 <input type="radio" value="cone" name="focus" /> Cone
