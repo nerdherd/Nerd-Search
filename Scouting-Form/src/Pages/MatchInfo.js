@@ -41,7 +41,7 @@ function MatchInfo({matchInfo, setMatchInfo, getScore, incrementScore, completed
     return (
         <div id='mainDiv'> 
 
-            <h4>What role did their robot play throughout the match?</h4>
+            <h4>What role did they play?</h4>
             <div onChange={handleChange} className="radioInput">
                 <input type="checkbox" value="scorer" name="robotRole" /> Scorer
                 <input type="checkbox" value="defense" name="robotRole" /> Defense
@@ -65,7 +65,7 @@ function MatchInfo({matchInfo, setMatchInfo, getScore, incrementScore, completed
                 <input type="checkbox" value="doesn't score" name="scoreAbility" /> Doesn't score
             </div>
 
-            <div className="gamePieceFocus">
+            <div id="gamePieceFocus" className="gamePieceFocus">
                 <h4>Focuses on Scoring</h4>
                 <FocusButton scoreType="Game Piece Focus" getScore={getScore} incrementScore={incrementScore}></FocusButton>
             </div>
