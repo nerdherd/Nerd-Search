@@ -11,14 +11,10 @@ const sheets = google.sheets({version: 'v4', auth});
 
 // specify the spreadsheet ID and range where you want to add rows
 const spreadsheetId = '1zvDFIsf1ME-L4nAOCs1FgOKbWKCp5UKaGfJG0OgkD-Y';
-const range = 'Sheet1!A1:B';
+const range = 'Sheet1!A1:F';
 
 // define the rows you want to add to the spreadsheet
-const rows = [
-  ['John', 'Doe'],
-  ['Jane', 'Doe'],
-  ['Bob', 'Smith'],
-];
+const rows = [];
 
 async function addRowsToSheet(spreadsheetId, range, rows) {
     // set up authentication client with credentials
