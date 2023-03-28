@@ -31,48 +31,6 @@
     font-size: 4vh
 }
 
-#driverCommentsHeader {
-    display: block;
-    text-align: center;
-    font-size: 2vh
-}
-
-#intakeCommentsHeader {
-    display: block;
-    text-align: center;
-    font-size: 2vh
-}
-
-#autonomousCommentsHeader {
-    display: block;
-    text-align: center;
-    font-size: 2vh
-}
-
-#teleopCommentsHeader {
-    display: block;
-    text-align: center;
-    font-size: 2vh
-}
-
-#uniqueCommentsHeader {
-    display: block;
-    text-align: center;
-    font-size: 2vh
-}
-
-#redFlagsHeader {
-    display: block;
-    text-align: center;
-    font-size: 2vh
-}
-
-#additionalCommentsHeader {
-    display: block;
-    text-align: center;
-    font-size: 2vh
-}
-
 .error {
     color: red;
     display: block;

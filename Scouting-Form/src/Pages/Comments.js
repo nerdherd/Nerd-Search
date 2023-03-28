@@ -44,7 +44,7 @@ function Comments({scouterComments, setScouterComments, completedForms, setCompl
     return (
         <div id='scouterComments'>
             <h1 id='title'>Comments and Criticism</h1>
-            <p id='driverCommentsHeader'><b>How good is their driver?</b></p>
+            <h4>How good is their driver?</h4>
             <input
                 name = "driverComments"
                 placeholder="How good is their driver?"
@@ -54,7 +54,7 @@ function Comments({scouterComments, setScouterComments, completedForms, setCompl
                 className='inputField'
             ></input>
 
-            <p id='intakeCommentsHeader'><b>How consistent/efficient is their intake?</b></p>
+            <h4>How consistent/efficient is their intake?</h4>
             <input
                 name = "intakeComments"
                 placeholder="How consistent/efficient is their intake?"
@@ -64,7 +64,7 @@ function Comments({scouterComments, setScouterComments, completedForms, setCompl
                 value={scouterComments.intakeComments}
             ></input>
 
-            <p id='autonomousCommentsHeader'><b>Additional Autonomous Comments</b></p>
+            <h4>Additional Autonomous Comments</h4>
             <input
                 name = "autonomousComments"
                 placeholder="Additional Autonomous Comments:"
@@ -74,7 +74,7 @@ function Comments({scouterComments, setScouterComments, completedForms, setCompl
                 value={scouterComments.autonomousComments}
             ></input>
 
-            <p id='teleopCommentsHeader'><b>Additional Teleop Comments</b></p>
+            <h4>Additional Teleop Comments</h4>
             <input
                 name = "teleopComments"
                 placeholder="Additional Teleop Comments:"
@@ -84,7 +84,7 @@ function Comments({scouterComments, setScouterComments, completedForms, setCompl
                 className='inputField'
             ></input>
 
-            <p id='uniqueCommentsHeader'><b>Anything unique/strong about this robot?</b></p>
+            <h4>Anything unique/strong about this robot?</h4>
              <input
                 name = "uniqueComments"
                 placeholder="Anything unique/strong about this robot?"
@@ -94,7 +94,7 @@ function Comments({scouterComments, setScouterComments, completedForms, setCompl
                 value={scouterComments.uniqueComments}
             ></input>
 
-            <p id='redFlagsHeader'><b>Are there any red flags about this robot?</b></p>
+            <h4>Are there any red flags about this robot?</h4>
             <input
                 name = "redFlags"
                 placeholder="Are there any red flags about this robot?"
@@ -104,7 +104,7 @@ function Comments({scouterComments, setScouterComments, completedForms, setCompl
                 value={scouterComments.redFlags}
             ></input>
 
-            <p id='additionalCommentsHeader'><b>Additional Comments</b></p>
+            <h4>Additional Comments</h4>
             <input
                 name = "additionalComments"
                 placeholder="Additional Comments:"
