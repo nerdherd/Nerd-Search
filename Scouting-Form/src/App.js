@@ -172,7 +172,7 @@ function App() {
       <Routes>
           <Route path='/' element={<ScouterInfo scouterInfo={scouterInfo} setScouterInfo={setScouterInfo} completedForms={completedForms} setCompletedForms={setCompletedForms}/>} />
           <Route path="/autonomous" element={<Auto getScore={getScore} incrementScore={incrementScore} completedForms={completedForms} setCompletedForms={setCompletedForms}/>}  />
-          <Route path="/teleop" element={<Teleop getScore={getScore} incrementScore={incrementScore} setCompletedForms={setCompletedForms} completedForms={completedForms}/>}  />
+          <Route path="/teleop" element={<Teleop getScore={getScore} incrementScore={incrementScore} matchInfo={matchInfo} setMatchInfo={setMatchInfo} setCompletedForms={setCompletedForms} completedForms={completedForms}/>}  />
           <Route path="/formComplete" element={<FormComplete matchNumber={scouterInfo.matchNumber} teamNumber={scouterInfo.teamNumber}  resetStates={resetStates}/>}></Route>
           <Route path='/matchInfo' element={<MatchInfo getScore={getScore} incrementScore={incrementScore} matchInfo={matchInfo} setMatchInfo={setMatchInfo} completedForms={completedForms} setCompletedForms={setCompletedForms}/>} />
           <Route path='/comments' element={<Comments scouterComments={scouterComments} setScouterComments={setScouterComments} completedForms={completedForms} setCompletedForms={setCompletedForms} postData={postData}/>} />
