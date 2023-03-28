@@ -1,6 +1,7 @@
 import ChargeStation from "../Forms/ChargeStation.js";
 import MobilityButton from "../Forms/MobilityButton.js";
 import ScoreButton from "../Forms/ScoreButton.js"
+import CoopertitionButton from "../Forms/CoopertitionButton"
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import './styles/scoringPages.css'
@@ -62,12 +63,11 @@ function Teleop({matchInfo, setMatchInfo, getScore, incrementScore, completedFor
                     <input type="checkbox" value="doubleSubstationS" name="intakeLocation" /> double substation: shelf
                     <input type="checkbox" value="none" name="intakeLocation" /> no intake
                 </div>
+            </div>
 
+            <div className="coopertitionGrid">
                 <h4>Does the robot score on the coopertition grid?</h4>
-                <div onChange={handleChange} >
-                    <input type="radio" value="yes" name="gridStatus" /> Yes
-                    <input type="radio" value="no" name="gridStatus" /> No
-                </div>
+                <CoopertitionButton scoreType="Coopertition Use" getScore={getScore} incrementScore={incrementScore}></CoopertitionButton>
             </div>
 
             <div className="mobilityAndDock">

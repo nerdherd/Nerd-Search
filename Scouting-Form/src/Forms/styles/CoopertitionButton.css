@@ -1,0 +1,14 @@
+#yes {
+    width: 50%;
+    background-color: #77dd77;
+}
+
+#no {
+    width: 50%;
+    background-color: #ff6961
+}
+
+#default {
+    width: 50%;
+    background-color: rgb(189, 178, 178);
+}

@@ -69,6 +69,12 @@ function App() {
     {
       scoreType: "Teleop Mobility",
       scoreValue: 0
+    },
+
+    // coopertition use: 0 is no, 1 is default (if they don't know what to answer), 2 is yes
+    {
+      scoreType: "Coopertition Use",
+      scoreValue: 1
     }
   ]
 
