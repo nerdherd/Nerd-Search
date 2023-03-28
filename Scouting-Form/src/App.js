@@ -135,6 +135,21 @@ function App() {
     return scores[getScoreIndex].scoreValue
   }
 
+  function postData() {
+    fetch('/api/scouting/results', {
+      method: 'POST',
+      body: JSON.stringify({
+          scores: scores
+      }),  
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+
+      },
+    }).catch((err) => {
+      console.log(err.message)
+    })
+  }
+
   return (
     <BrowserRouter>
       <Routes>
@@ -143,7 +158,7 @@ function App() {
           <Route path="/teleop" element={<Teleop getScore={getScore} incrementScore={incrementScore} setCompletedForms={setCompletedForms} completedForms={completedForms}/>}  />
           <Route path="/formComplete" element={<FormComplete matchNumber={scouterInfo.matchNumber} teamNumber={scouterInfo.teamNumber}  resetStates={resetStates}/>}></Route>
           <Route path='/matchInfo' element={<MatchInfo matchInfo={matchInfo} setMatchInfo={setMatchInfo} completedForms={completedForms} setCompletedForms={setCompletedForms}/>} />
-          <Route path='/comments' element={<Comments scouterComments={scouterComments} setScouterComments={setScouterComments} completedForms={completedForms} setCompletedForms={setCompletedForms}/>} />
+          <Route path='/comments' element={<Comments scouterComments={scouterComments} setScouterComments={setScouterComments} completedForms={completedForms} setCompletedForms={setCompletedForms} postData={postData}/>} />
       </Routes>
     </BrowserRouter>
   )

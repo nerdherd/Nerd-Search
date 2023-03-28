@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import './styles/comments.css'
-function Comments({scouterComments, setScouterComments, completedForms, setCompletedForms}) {
+function Comments({scouterComments, setScouterComments, completedForms, setCompletedForms, postData}) {
     
     const [error, setError] = useState(null)
 
@@ -37,6 +37,8 @@ function Comments({scouterComments, setScouterComments, completedForms, setCompl
                 scouterComments: true
             })
         }
+
+        postData()
     }
     
     return (

@@ -14,9 +14,8 @@ const spreadsheetId = '1zvDFIsf1ME-L4nAOCs1FgOKbWKCp5UKaGfJG0OgkD-Y';
 const range = 'Sheet1!A1:F';
 
 // define the rows you want to add to the spreadsheet
-const rows = [];
 
-async function addRowsToSheet(spreadsheetId, range, rows) {
+async function addRowsToSheet(rows) {
     // set up authentication client with credentials
     const auth = new google.auth.GoogleAuth({
       keyFile: 'credentials.json', // path to your credentials file
@@ -37,14 +36,9 @@ async function addRowsToSheet(spreadsheetId, range, rows) {
         },
       });
   
-      console.log(`Successfully added ${response.data.updates.updatedCells} cells to the spreadsheet.`);
     } catch (err) {
       console.log(`The API returned an error: ${err}`);
     }
   }
 
-const addRow = () => {
-    addRowsToSheet(spreadsheetId, range, rows);
-}
-
-module.exports.addRow = addRow
+module.exports.addRowsToSheet = addRowsToSheet
