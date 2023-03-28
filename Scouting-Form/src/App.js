@@ -80,6 +80,12 @@ function App() {
     {
       scoreType: "Game Piece Focus",
       scoreValue: 1
+    },
+
+    // penalties: 0 is none, 1 is some, 2 is egregious
+    {
+      scoreType: "Penalties",
+      scoreValue: 0
     }
   ]
 

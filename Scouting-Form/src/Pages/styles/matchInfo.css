@@ -6,7 +6,11 @@
     align-content: center;
 }
 
-
 .gamePieceFocus {
     height: 25vh;
+    width: 60vh;
+}
+
+.penalties {
+    width: 60vh;
 }

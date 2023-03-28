@@ -1,3 +1,4 @@
+import PenaltiesButton from "../Forms/PenaltiesButton.js";
 import FocusButton from "../Forms/FocusButton.js";
 import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
@@ -49,12 +50,9 @@ function MatchInfo({matchInfo, setMatchInfo, getScore, incrementScore, completed
                 <input type="checkbox" value="noRole" name="robotRole" /> No Role
             </div>
 
-            <h4>Penalties?</h4>
-
-            <div onChange={handleChange} className="radioInput">
-                <input type="radio" value="egregious" name="penalty" /> Egregious (ie. Red/Yellow Card)
-                <input type="radio" value="some" name="penalty" /> Some
-                <input type="radio" value="none" name="penalty" /> None
+            <div className="penalties">
+                <h4>Penalties?</h4>
+                <PenaltiesButton scoreType="Penalties" getScore={getScore} incrementScore={incrementScore}></PenaltiesButton>
             </div>
 
             <h4>Able to Score</h4>
@@ -65,7 +63,7 @@ function MatchInfo({matchInfo, setMatchInfo, getScore, incrementScore, completed
                 <input type="checkbox" value="doesn't score" name="scoreAbility" /> Doesn't score
             </div>
 
-            <div id="gamePieceFocus" className="gamePieceFocus">
+            <div className="gamePieceFocus">
                 <h4>Focuses on Scoring</h4>
                 <FocusButton scoreType="Game Piece Focus" getScore={getScore} incrementScore={incrementScore}></FocusButton>
             </div>
