@@ -43,7 +43,7 @@ function Comments({scouterComments, setScouterComments, completedForms, setCompl
     
     return (
         <div id='scouterComments'>
-            <h1 id='title'>Comments and Criticism:</h1>
+            <h1 id='title'>Comments and Criticism</h1>
             <p id='driverCommentsHeader'><b>How good is their driver?</b></p>
             <input
                 name = "driverComments"

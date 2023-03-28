@@ -47,6 +47,7 @@ function Teleop({matchInfo, setMatchInfo, getScore, incrementScore, completedFor
 
     return (
         <div className="mainDiv">
+            <h1 id='title'>Teleop Period</h1>
 
             <ScoreButton scoreType="High Teleop" getScore={getScore} incrementScore={incrementScore}></ScoreButton>
             <ScoreButton scoreType="Mid Teleop" getScore={getScore} incrementScore={incrementScore}></ScoreButton>

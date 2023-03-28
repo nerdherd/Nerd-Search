@@ -33,6 +33,7 @@ function Auto({getScore, incrementScore, completedForms, setCompletedForms}) {
 
     return (
         <div className='mainDiv'>
+            <h1 id='title'>Autonomous Period</h1>
             <div className='cone'>
                 <ScoreButton scoreType="High Auto" getScore={getScore} incrementScore={incrementScore}></ScoreButton>
                 <ScoreButton scoreType="Mid Auto" getScore={getScore} incrementScore={incrementScore}></ScoreButton>

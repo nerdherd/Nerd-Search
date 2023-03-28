@@ -41,7 +41,7 @@ function MatchInfo({matchInfo, setMatchInfo, getScore, incrementScore, completed
 
     return (
         <div id='mainDiv'> 
-
+            <h1 id='title'>Match Info</h1>
             <h4>What role did they play?</h4>
             <div onChange={handleChange} className="radioInput">
                 <input type="checkbox" value="scorer" name="robotRole" /> Scorer
