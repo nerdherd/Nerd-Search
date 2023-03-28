@@ -153,7 +153,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-          <Route path='/scouterInfo' element={<ScouterInfo scouterInfo={scouterInfo} setScouterInfo={setScouterInfo} completedForms={completedForms} setCompletedForms={setCompletedForms}/>} />
+          <Route path='/' element={<ScouterInfo scouterInfo={scouterInfo} setScouterInfo={setScouterInfo} completedForms={completedForms} setCompletedForms={setCompletedForms}/>} />
           <Route path="/autonomous" element={<Auto getScore={getScore} incrementScore={incrementScore} completedForms={completedForms} setCompletedForms={setCompletedForms}/>}  />
           <Route path="/teleop" element={<Teleop getScore={getScore} incrementScore={incrementScore} setCompletedForms={setCompletedForms} completedForms={completedForms}/>}  />
           <Route path="/formComplete" element={<FormComplete matchNumber={scouterInfo.matchNumber} teamNumber={scouterInfo.teamNumber}  resetStates={resetStates}/>}></Route>

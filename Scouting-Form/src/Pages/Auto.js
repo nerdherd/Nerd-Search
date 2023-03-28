@@ -19,7 +19,7 @@ function Auto({getScore, incrementScore, completedForms, setCompletedForms}) {
             ...completedForms,
             autonomous: false
         })
-        navigate('/scouterInfo')
+        navigate('/')
     }
 
     function handleSubmit(event) {
