@@ -1,8 +1,9 @@
+import FocusButton from "../Forms/FocusButton.js";
 import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import './styles/matchInfo.css'
 
-function MatchInfo({matchInfo, setMatchInfo, completedForms, setCompletedForms}) {
+function MatchInfo({matchInfo, setMatchInfo, getScore, incrementScore, completedForms, setCompletedForms}) {
     const navigate = new useNavigate()
     
     useEffect(() => {
@@ -64,11 +65,9 @@ function MatchInfo({matchInfo, setMatchInfo, completedForms, setCompletedForms})
                 <input type="checkbox" value="doesn't score" name="scoreAbility" /> Doesn't score
             </div>
 
-            <h4>Focuses on Scoring</h4>
-
-            <div onChange={handleChange} className="radioInput">
-                <input type="radio" value="cone" name="focus" /> Cone
-                <input type="radio" value="cube" name="focus" /> Cube
+            <div className="gamePieceFocus">
+                <h4>Focuses on Scoring</h4>
+                <FocusButton scoreType="Game Piece Focus" getScore={getScore} incrementScore={incrementScore}></FocusButton>
             </div>
 
             <button type='submit' onClick={handleSubmit}>Go To Comments Page</button>

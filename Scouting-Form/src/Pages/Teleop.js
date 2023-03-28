@@ -1,7 +1,7 @@
 import ChargeStation from "../Forms/ChargeStation.js";
 import MobilityButton from "../Forms/MobilityButton.js";
 import ScoreButton from "../Forms/ScoreButton.js"
-import CoopertitionButton from "../Forms/CoopertitionButton"
+import CoopertitionButton from "../Forms/CoopertitionButton.js"
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import './styles/scoringPages.css'

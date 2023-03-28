@@ -75,6 +75,11 @@ function App() {
     {
       scoreType: "Coopertition Use",
       scoreValue: 1
+    },
+    // game piece focus: 0 is didn't score, 1 is cubes, 2 is cones
+    {
+      scoreType: "Game Piece Focus",
+      scoreValue: 1
     }
   ]
 
@@ -163,7 +168,7 @@ function App() {
           <Route path="/autonomous" element={<Auto getScore={getScore} incrementScore={incrementScore} completedForms={completedForms} setCompletedForms={setCompletedForms}/>}  />
           <Route path="/teleop" element={<Teleop getScore={getScore} incrementScore={incrementScore} setCompletedForms={setCompletedForms} completedForms={completedForms}/>}  />
           <Route path="/formComplete" element={<FormComplete matchNumber={scouterInfo.matchNumber} teamNumber={scouterInfo.teamNumber}  resetStates={resetStates}/>}></Route>
-          <Route path='/matchInfo' element={<MatchInfo matchInfo={matchInfo} setMatchInfo={setMatchInfo} completedForms={completedForms} setCompletedForms={setCompletedForms}/>} />
+          <Route path='/matchInfo' element={<MatchInfo getScore={getScore} incrementScore={incrementScore} matchInfo={matchInfo} setMatchInfo={setMatchInfo} completedForms={completedForms} setCompletedForms={setCompletedForms}/>} />
           <Route path='/comments' element={<Comments scouterComments={scouterComments} setScouterComments={setScouterComments} completedForms={completedForms} setCompletedForms={setCompletedForms} postData={postData}/>} />
       </Routes>
     </BrowserRouter>
