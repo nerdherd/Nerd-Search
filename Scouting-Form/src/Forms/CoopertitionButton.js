@@ -8,11 +8,11 @@ function CoopertitionButton({scoreType, getScore, incrementScore}) {
     // TODO: switch case for better code 
 
     if (getScore(scoreType) == 0) {
+        buttonColor = "noScore"
+        coopertitionStatus = "Cannot Score"
+    } else if (getScore(scoreType) == 1) {
         buttonColor = "no"
         coopertitionStatus = "No"
-    } else if (getScore(scoreType) == 1) {
-        buttonColor = "default"
-        coopertitionStatus = "Default"
     } else if (getScore(scoreType) == 2) {
         buttonColor = "yes"
         coopertitionStatus = "Yes"
@@ -26,4 +26,3 @@ function CoopertitionButton({scoreType, getScore, incrementScore}) {
   }
   
   export default CoopertitionButton;
-  

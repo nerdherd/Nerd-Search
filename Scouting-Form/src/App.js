@@ -71,7 +71,7 @@ function App() {
       scoreValue: 0
     },
 
-    // coopertition use: 0 is no, 1 is default (if they don't know what to answer), 2 is yes
+    // coopertition use: 0 is cannot score, 1 is no, 2 is yes
     {
       scoreType: "Coopertition Use",
       scoreValue: 1

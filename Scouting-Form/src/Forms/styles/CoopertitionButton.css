@@ -1,6 +1,6 @@
-#yes {
+#noScore {
     width: 50%;
-    background-color: #77dd77;
+    background-color: rgb(189, 178, 178);
 }
 
 #no {
@@ -8,7 +8,7 @@
     background-color: #ff6961
 }
 
-#default {
+#yes {
     width: 50%;
-    background-color: rgb(189, 178, 178);
+    background-color: #77dd77;
 }
