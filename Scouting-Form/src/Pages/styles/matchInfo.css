@@ -14,7 +14,11 @@
 
 .penalties {
     width: 60vh;
-    height: 20vh
+    height: 18vh
+}
+
+.matchInforadioInput {
+    height: 7vh
 }
 
 #roleHeader {
