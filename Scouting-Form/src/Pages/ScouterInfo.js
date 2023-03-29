@@ -35,7 +35,7 @@ function ScouterInfo({scouterInfo, setScouterInfo, completedForms, setCompletedF
         <div id='scouterInfo'>
             <h1 id='title'>BETA: 687 Scouting App 2023</h1>
 
-            <h4>Name (First Last)</h4>
+            <p id="usernameHeader"><b>Name (First Last)</b></p>
             <input
                 name = "username"
                 placeholder="Username"
@@ -45,7 +45,7 @@ function ScouterInfo({scouterInfo, setScouterInfo, completedForms, setCompletedF
                 className='inputField'
             ></input>
 
-            <h4>Match Number</h4>
+            <p id="matchNumberHeader"><b>Match Number</b></p>
             <input
                 name = "matchNumber"
                 placeholder="Match Number"
@@ -55,7 +55,7 @@ function ScouterInfo({scouterInfo, setScouterInfo, completedForms, setCompletedF
                 value={scouterInfo.matchNumber}
             ></input>
 
-            <h4>Team Number</h4>
+            <p id="teamNumberHeader"><b>Team Number</b></p>
             <input
                 name = "teamNumber"
                 placeholder="Team Number"

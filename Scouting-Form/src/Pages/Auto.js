@@ -41,7 +41,7 @@ function Auto({getScore, incrementScore, completedForms, setCompletedForms}) {
             </div>
             
             <div className="mobilityAndDock">
-                <h4>Docking and Mobility Status:</h4>
+                <p>Docking and Mobility Status:</p>
                 <ChargeStation scoreType="Charge Station Auto" getScore={getScore} incrementScore={incrementScore}></ChargeStation>
                 <MobilityButton scoreType="Auto Mobility" getScore={getScore} incrementScore={incrementScore} isAuto={true}></MobilityButton>
             </div>

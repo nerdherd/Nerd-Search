@@ -1,9 +1,10 @@
 #mainDiv {
     width: 100%;
-    height: 110vh;
+    height: 115vh;
     display: flex;
     justify-content: center;
     align-content: center;
+    font-size: 2vh
 }
 
 .gamePieceFocus {
@@ -13,4 +14,20 @@
 
 .penalties {
     width: 60vh;
+}
+
+#roleHeader {
+    font-size: 3vh
+}
+
+#penaltiesHeader {
+    font-size: 3vh
+}
+
+#abilityHeader {
+    font-size: 3vh
+}
+
+#focusHeader {
+    font-size: 3vh
 }
