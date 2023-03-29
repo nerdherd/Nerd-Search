@@ -30,3 +30,18 @@ h4 {
     height: 1vh;
 }
 
+#scoreTypeLabel {
+    font-size: 2vh
+}
+
+#autoDockMobilityStatusHeader {
+    font-size: 2vh
+}
+
+#teleopDockMobilityStatusHeader {
+    font-size: 2vh
+}
+
+#intakeLocationHeader {
+    font-size: 2vh
+}
