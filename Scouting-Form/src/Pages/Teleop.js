@@ -67,7 +67,7 @@ function Teleop({matchInfo, setMatchInfo, getScore, incrementScore, completedFor
             </div>
 
             <div className="coopertitionGrid">
-                <p>Does the robot score on the coopertition grid?</p>
+                <p id="coopertitionGridHeader"><b>Does the robot score on the coopertition grid?</b></p>
                 <CoopertitionButton scoreType="Coopertition Use" getScore={getScore} incrementScore={incrementScore}></CoopertitionButton>
             </div>
 
