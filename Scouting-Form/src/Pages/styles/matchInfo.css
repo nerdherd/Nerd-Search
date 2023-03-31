@@ -7,12 +7,12 @@
     font-size: 2vh
 }
 
-.gamePieceFocus {
+#gamePieceFocus {
     height: 20vh;
     width: 60vh;
 }
 
-.penalties {
+#penalties {
     width: 60vh;
     height: 18vh
 }

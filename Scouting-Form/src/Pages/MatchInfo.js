@@ -50,7 +50,7 @@ function MatchInfo({matchInfo, setMatchInfo, getScore, incrementScore, completed
                 <input type="checkbox" value="noRole" name="robotRole" /> No Role
             </div>
 
-            <div className="penalties">
+            <div id="penalties">
                 <p id="penaltiesHeader"><b>Penalties?</b></p>
                 <PenaltiesButton scoreType="Penalties" getScore={getScore} incrementScore={incrementScore}></PenaltiesButton>
             </div>
@@ -63,7 +63,7 @@ function MatchInfo({matchInfo, setMatchInfo, getScore, incrementScore, completed
                 <input type="checkbox" value="doesn't score" name="scoreAbility" /> Doesn't score
             </div>
 
-            <div className="gamePieceFocus">
+            <div id="gamePieceFocus">
                 <p id="focusHeader"><b>Focuses on Scoring</b></p>
                 <FocusButton scoreType="Game Piece Focus" getScore={getScore} incrementScore={incrementScore}></FocusButton>
             </div>
