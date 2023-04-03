@@ -45,74 +45,74 @@ function Comments({scouterComments, setScouterComments, completedForms, setCompl
         <div id='scouterComments'>
             <h1 id='title'>Comments and Criticism</h1>
             <p id="driverCommentsHeader"><b>How good is their driver?</b></p>
-            <input
+            <textarea
                 name = "driverComments"
                 placeholder="How good is their driver?"
                 onChange={handleChange}
-                type='text'
+                type='textarea'
                 value={scouterComments.driverComments}
                 className='inputField'
-            ></input>
+            ></textarea>
 
             <p id="intakeCommentsHeader"><b>How consistent/efficient is their intake?</b></p>
-            <input
+            <textarea
                 name = "intakeComments"
                 placeholder="How consistent/efficient is their intake?"
                 type='text'
                 onChange={handleChange}
                 className='inputField'
                 value={scouterComments.intakeComments}
-            ></input>
+            ></textarea>
 
             <p id="autoCommentsHeader"><b>Additional Autonomous Comments</b></p>
-            <input
+            <textarea
                 name = "autonomousComments"
                 placeholder="Additional Autonomous Comments:"
                 type='text'
                 onChange={handleChange}
                 className='inputField'
                 value={scouterComments.autonomousComments}
-            ></input>
+            ></textarea>
 
             <p id="teleopCommentsHeader"><b>Additional Teleop Comments</b></p>
-            <input
+            <textarea
                 name = "teleopComments"
                 placeholder="Additional Teleop Comments:"
                 onChange={handleChange}
                 type='text'
                 value={scouterComments.teleopComments}
                 className='inputField'
-            ></input>
+            ></textarea>
 
             <p id="uniqueCommentsHeader"><b>Anything unique/strong about this robot?</b></p>
-             <input
+             <textarea
                 name = "uniqueComments"
                 placeholder="Anything unique/strong about this robot?"
                 type='text'
                 onChange={handleChange}
                 className='inputField'
                 value={scouterComments.uniqueComments}
-            ></input>
+            ></textarea>
 
             <p id="redFlagsHeader"><b>Are there any red flags about this robot?</b></p>
-            <input
+            <textarea
                 name = "redFlags"
                 placeholder="Are there any red flags about this robot?"
                 type='text'
                 className='inputField'
                 onChange={handleChange}
                 value={scouterComments.redFlags}
-            ></input>
+            ></textarea>
 
             <p id="additionalCommentsHeader"><b>Additional Comments</b></p>
-            <input
+            <textarea
                 name = "additionalComments"
                 placeholder="Additional Comments:"
                 type='text'
                 className='inputField'
                 onChange={handleChange}
                 value={scouterComments.additionalComments}
-            ></input>
+            ></textarea>
 
             <button type='submit' onClick={handleSubmit} id='submitButton'>Submit Form</button>
             <button type='back' onClick={handleBack}>Back To Match Info</button>
