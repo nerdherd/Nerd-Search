@@ -12,6 +12,7 @@
 button {
     width: 50%;
     height: 10vh;
-    color: black;
     font-size: 3vh;
+    background-color: grey;
+    font-weight: bold
 }

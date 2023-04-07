@@ -48,8 +48,8 @@ function Auto({getScore, incrementScore, completedForms, setCompletedForms}) {
 
             <div className="navigation">
                 <p></p>
-                <button type='submit' onClick={handleSubmit}>Go To Teleop Page</button>
-                <button type='back' onClick={handleBack}>Back To User Info</button>
+                <button type='submit' onClick={handleSubmit} id='submitButtonText' >Go To Teleop Page</button>
+                <button type='back' onClick={handleBack} id='submitButtonText' >Back To User Info</button>
             </div>
         </div>
     )    

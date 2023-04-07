@@ -68,8 +68,8 @@ function MatchInfo({matchInfo, setMatchInfo, getScore, incrementScore, completed
                 <FocusButton scoreType="Game Piece Focus" getScore={getScore} incrementScore={incrementScore}></FocusButton>
             </div>
 
-            <button type='submit' onClick={handleSubmit}>Go To Comments Page</button>
-            <button type='back' onClick={handleBack}>Back To Teleop Page</button>
+            <button type='submit' onClick={handleSubmit} id='submitButtonText'>Go To Comments Page</button>
+            <button type='back' onClick={handleBack} id='backButtonText'>Back To Teleop Page</button>
 
         </div>
 

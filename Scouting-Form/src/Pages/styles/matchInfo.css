@@ -7,6 +7,24 @@
     font-size: 2vh
 }
 
+#submitButton {
+    height: 10%;
+    width: 80%;
+    display: block;
+    
+}
+
+#submitButtonText {
+    color: white;
+    align-content: center;
+
+}
+
+#backButtonText {
+    align-content: center;
+    color: white;
+}
+
 #gamePieceFocus {
     height: 20vh;
     width: 60vh;
@@ -36,3 +54,8 @@
 #focusHeader {
     font-size: 2vh
 }
+
+.element {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
