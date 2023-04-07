@@ -38,7 +38,7 @@ function ScouterInfo({scouterInfo, setScouterInfo, completedForms, setCompletedF
             <p id="usernameHeader"><b>Name (First Last)</b></p>
             <input
                 name = "username"
-                placeholder="Username"
+                placeholder="Type here"
                 onChange={handleChange}
                 type='text'
                 value={scouterInfo.username}
@@ -48,7 +48,7 @@ function ScouterInfo({scouterInfo, setScouterInfo, completedForms, setCompletedF
             <p id="matchNumberHeader"><b>Match Number</b></p>
             <input
                 name = "matchNumber"
-                placeholder="Match Number"
+                placeholder="Type here"
                 type='number'
                 onChange={handleChange}
                 className='inputField'
@@ -58,13 +58,13 @@ function ScouterInfo({scouterInfo, setScouterInfo, completedForms, setCompletedF
             <p id="teamNumberHeader"><b>Team Number</b></p>
             <input
                 name = "teamNumber"
-                placeholder="Team Number"
+                placeholder="Type here"
                 type='number'
                 className='inputField'
                 onChange={handleChange}
                 value={scouterInfo.teamNumber}
             ></input>
-            <button type='submit' onClick={handleSubmit} id='submitButton'>Submit User Info</button>
+            <button type='submit' onClick={handleSubmit} id='submitButtonText'>Submit User Info</button>
             {error !== '' ? <p className='error'>{error}</p> : null}
         </div>
     )

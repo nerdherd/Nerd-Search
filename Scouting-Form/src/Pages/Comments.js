@@ -47,7 +47,7 @@ function Comments({scouterComments, setScouterComments, completedForms, setCompl
             <p id="driverCommentsHeader"><b>How good is their driver?</b></p>
             <textarea
                 name = "driverComments"
-                placeholder="How good is their driver?"
+                placeholder="Type here"
                 onChange={handleChange}
                 type='textarea'
                 value={scouterComments.driverComments}
@@ -57,7 +57,7 @@ function Comments({scouterComments, setScouterComments, completedForms, setCompl
             <p id="intakeCommentsHeader"><b>How consistent/efficient is their intake?</b></p>
             <textarea
                 name = "intakeComments"
-                placeholder="How consistent/efficient is their intake?"
+                placeholder="Type here"
                 type='text'
                 onChange={handleChange}
                 className='inputField'
@@ -67,7 +67,7 @@ function Comments({scouterComments, setScouterComments, completedForms, setCompl
             <p id="autoCommentsHeader"><b>Additional Autonomous Comments</b></p>
             <textarea
                 name = "autonomousComments"
-                placeholder="Additional Autonomous Comments:"
+                placeholder="Type here"
                 type='text'
                 onChange={handleChange}
                 className='inputField'
@@ -77,7 +77,7 @@ function Comments({scouterComments, setScouterComments, completedForms, setCompl
             <p id="teleopCommentsHeader"><b>Additional Teleop Comments</b></p>
             <textarea
                 name = "teleopComments"
-                placeholder="Additional Teleop Comments:"
+                placeholder="Type here"
                 onChange={handleChange}
                 type='text'
                 value={scouterComments.teleopComments}
@@ -87,7 +87,7 @@ function Comments({scouterComments, setScouterComments, completedForms, setCompl
             <p id="uniqueCommentsHeader"><b>Anything unique/strong about this robot?</b></p>
              <textarea
                 name = "uniqueComments"
-                placeholder="Anything unique/strong about this robot?"
+                placeholder="Type here"
                 type='text'
                 onChange={handleChange}
                 className='inputField'
@@ -97,7 +97,7 @@ function Comments({scouterComments, setScouterComments, completedForms, setCompl
             <p id="redFlagsHeader"><b>Are there any red flags about this robot?</b></p>
             <textarea
                 name = "redFlags"
-                placeholder="Are there any red flags about this robot?"
+                placeholder="Type here"
                 type='text'
                 className='inputField'
                 onChange={handleChange}
@@ -107,15 +107,17 @@ function Comments({scouterComments, setScouterComments, completedForms, setCompl
             <p id="additionalCommentsHeader"><b>Additional Comments</b></p>
             <textarea
                 name = "additionalComments"
-                placeholder="Additional Comments:"
+                placeholder="Type here"
                 type='text'
                 className='inputField'
                 onChange={handleChange}
                 value={scouterComments.additionalComments}
             ></textarea>
 
-            <button type='submit' onClick={handleSubmit} id='submitButton'>Submit Form</button>
-            <button type='back' onClick={handleBack}>Back To Match Info</button>
+             <p id="additionalCommentsHeader"><b> </b></p>
+
+            <button type='submit' onClick={handleSubmit} id='submitButtonText'>Submit Form</button>
+            <button type='back' onClick={handleBack} id='backButtonText'>Back To Match Info</button>
             {error !== '' ? <p className='error'>{error}</p> : null}
         </div>
     )
