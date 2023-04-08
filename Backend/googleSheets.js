@@ -28,6 +28,7 @@ async function addRowsToSheet(rows) {
     const sheets = google.sheets({version: 'v4', auth});
   
     try { 
+      console.log("about to make response")
       const response = await sheets.spreadsheets.values.append({
         spreadsheetId,
         range,
