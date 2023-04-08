@@ -8,6 +8,16 @@ const router = express.Router()
 
 app.use(express.json())
 
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "https://nerdherd.github.io");
+    res.header(
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content-Type, Accept"
+    );
+    next();
+});
+  
+
 router.get('/scouting/results', (req, res) => {
     res.send('hi')
 })
