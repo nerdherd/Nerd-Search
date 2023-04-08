@@ -19,10 +19,6 @@ router.get('/scouting/results', (req, res) => {
 })
 
 router.post('/scouting/results', (req, res) => {
-
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-
     let scores = req.body.scores
     googleSheets.addRowsToSheet([[
         scores[0].scoreValue,

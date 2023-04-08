@@ -1,5 +1,6 @@
 const {google} = require('googleapis');
 
+
 // set up authentication client with credentials
 const auth = new google.auth.GoogleAuth({
   keyFile: '../credentials.json', // path to your credentials file
@@ -15,7 +16,7 @@ const range = 'Sheet1!A1:F';
 
 // define the rows you want to add to the spreadsheet
 
-async function addRowsToSheet(rows) {
+function addRowsToSheet(rows) {
     // set up authentication client with credentials
     const auth = new google.auth.GoogleAuth({
       keyFile: 'credentials.json', // path to your credentials file
@@ -27,7 +28,7 @@ async function addRowsToSheet(rows) {
   
     try {
       // call the Sheets API to append the rows to the spreadsheet
-      const response = await sheets.spreadsheets.values.append({
+      const response = sheets.spreadsheets.values.append({
         spreadsheetId,
         range,
         valueInputOption: 'USER_ENTERED',
