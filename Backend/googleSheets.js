@@ -28,19 +28,21 @@ function addRowsToSheet(rows) {
     const sheets = google.sheets({version: 'v4', auth});
   
     try { 
-    const response = sheets.spreadsheets.values.append({
-      spreadsheetId,
-      range,
-      valueInputOption: 'USER_ENTERED',
-      resource: {
-        values: rows,
-      },
-    }); }
+      const response = sheets.spreadsheets.values.append({
+        spreadsheetId,
+        range,
+        valueInputOption: 'USER_ENTERED',
+        resource: {
+          values: rows,
+        },
+      });
+      
+      console.log(response)
+    }
     catch (err) {
       console.log(err)
     }
 
-    console.log(response)
 
     return response
 }
