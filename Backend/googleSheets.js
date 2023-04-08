@@ -41,6 +41,7 @@ async function addRowsToSheet(rows) {
     }
     catch (err) {
       console.log(err)
+      console.log('error happened')
     }
 
 
