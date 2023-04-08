@@ -16,6 +16,8 @@ const range = 'Sheet1!A1:F';
 // define the rows you want to add to the spreadsheet
 
 async function addRowsToSheet(rows) {
+  console.log("request made")
+
     // set up authentication client with credentials
     const auth = new google.auth.GoogleAuth({
       keyFile: 'credentials.json', // path to your credentials file
