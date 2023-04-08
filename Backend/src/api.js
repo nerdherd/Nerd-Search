@@ -21,13 +21,8 @@ router.get('/scouting/results', (req, res) => {
 
 router.post('/scouting/results', (req, res) => {
     
-    console.log("dsada")
-
-    fs.readdir('.', (err, files) => {
-        files.forEach(file => {
-          console.log(file);
-        });
-    });
+    let json = require('./credentials.json');
+    console.log(json, 'the json obj');
 
     let scores = req.body.scores
 
