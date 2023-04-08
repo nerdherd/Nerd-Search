@@ -1,4 +1,4 @@
 [build]
     functions = "functions"
 [functions]
-    included_files = ["credentials.json"]
+    included_files = ["credentials.json", "googleSheets.js"]

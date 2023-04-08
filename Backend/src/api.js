@@ -2,7 +2,7 @@ const express = require('express')
 const serverless = require('serverless-http')
 const fs = require('fs');
 
-const googleSheets = require('./googleSheets')
+const googleSheets = require('../googleSheets')
 
 const app = express()
 const router = express.Router()
@@ -26,7 +26,7 @@ router.post('/scouting/results', (req, res) => {
     let rawdata = fs.readFileSync('./credentials.json');
     let credentials = JSON.parse(rawdata);
     console.log(credentials)
-    
+
     let scores = req.body.scores
 
     const googleSheetsReq = googleSheets.addRowsToSheet([[
