@@ -1,4 +1,4 @@
-import "./styles/coopertitionButton.css"
+import "./styles/CoopertitionButton.css"
 
 function CoopertitionButton({scoreType, getScore, incrementScore}) {
     let increment = (getScore(scoreType) == 2) ? -2 : 1
