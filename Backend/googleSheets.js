@@ -15,7 +15,7 @@ const range = 'Sheet1!A1:F';
 
 // define the rows you want to add to the spreadsheet
 
-function addRowsToSheet(rows) {
+async function addRowsToSheet(rows) {
   console.log("request made")
 
     // set up authentication client with credentials
@@ -28,7 +28,7 @@ function addRowsToSheet(rows) {
     const sheets = google.sheets({version: 'v4', auth});
   
     try { 
-      const response = sheets.spreadsheets.values.append({
+      const response = await sheets.spreadsheets.values.append({
         spreadsheetId,
         range,
         valueInputOption: 'USER_ENTERED',
