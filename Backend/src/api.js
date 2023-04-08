@@ -20,6 +20,8 @@ router.get('/scouting/results', (req, res) => {
 
 router.post('/scouting/results', (req, res) => {
     
+    console.log("dsada")
+
     let scores = req.body.scores
 
     const googleSheetsReq = googleSheets.addRowsToSheet([[
