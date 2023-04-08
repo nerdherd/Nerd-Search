@@ -2,7 +2,7 @@ const {google} = require('googleapis');
 
 // set up authentication client with credentials
 const auth = new google.auth.GoogleAuth({
-  keyFile: '../credentials.json', // path to your credentials file
+  keyFile: './credentials.json', // path to your credentials file
   scopes: ['https://www.googleapis.com/auth/spreadsheets'],
 });
 
