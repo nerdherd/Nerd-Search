@@ -1,5 +1,6 @@
 const express = require('express')
 const serverless = require('serverless-http')
+const fs = require('fs');
 
 const googleSheets = require('../googleSheets')
 
@@ -21,6 +22,12 @@ router.get('/scouting/results', (req, res) => {
 router.post('/scouting/results', (req, res) => {
     
     console.log("dsada")
+
+    fs.readdir('.', (err, files) => {
+        files.forEach(file => {
+          console.log(file);
+        });
+    });
 
     let scores = req.body.scores
 
