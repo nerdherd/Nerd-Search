@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 import Teleop from './Pages/Teleop.js'
 import Auto from './Pages/Auto.js'
 import "./index.css"
@@ -168,7 +168,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
           <Route path='/' element={<ScouterInfo scouterInfo={scouterInfo} setScouterInfo={setScouterInfo} completedForms={completedForms} setCompletedForms={setCompletedForms}/>} />
           <Route path="/autonomous" element={<Auto getScore={getScore} incrementScore={incrementScore} completedForms={completedForms} setCompletedForms={setCompletedForms}/>}  />
@@ -177,7 +177,7 @@ function App() {
           <Route path='/matchInfo' element={<MatchInfo getScore={getScore} incrementScore={incrementScore} matchInfo={matchInfo} setMatchInfo={setMatchInfo} completedForms={completedForms} setCompletedForms={setCompletedForms}/>} />
           <Route path='/comments' element={<Comments scouterComments={scouterComments} setScouterComments={setScouterComments} completedForms={completedForms} setCompletedForms={setCompletedForms} postData={postData}/>} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
