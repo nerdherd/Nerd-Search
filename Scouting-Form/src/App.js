@@ -153,7 +153,7 @@ function App() {
   }
 
   function postData() {
-    fetch('/api/scouting/results', {
+    fetch('https://kaleidoscopic-syrniki-80cc89.netlify.app/.netlify/functions/api/scouting/results', {
       method: 'POST',
       body: JSON.stringify({
           scores: scores
