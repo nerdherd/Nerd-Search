@@ -1,7 +1,7 @@
 const express = require('express')
 const serverless = require('serverless-http')
 
-const googleSheets = require('./googleSheets')
+const googleSheets = require('../googleSheets')
 
 const app = express()
 const router = express.Router()
