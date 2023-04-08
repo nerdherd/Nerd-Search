@@ -37,6 +37,8 @@ async function addRowsToSheet(rows) {
       },
     });
 
+    console.log(response)
+
     return response
 }
 
