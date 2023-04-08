@@ -19,15 +19,25 @@ router.get('/scouting/results', (req, res) => {
 })
 
 router.post('/scouting/results', (req, res) => {
+    
     let scores = req.body.scores
-    googleSheets.addRowsToSheet([[
-        scores[0].scoreValue,
-        scores[1].scoreValue,
-        scores[2].scoreValue,
-        scores[3].scoreValue,
-        scores[4].scoreValue,
-        scores[5].scoreValue,
-    ]])
+    try {
+        let response = googleSheets.addRowsToSheet([[
+            scores[0].scoreValue,
+            scores[1].scoreValue,
+            scores[2].scoreValue,
+            scores[3].scoreValue,
+            scores[4].scoreValue,
+            scores[5].scoreValue,
+        ]])
+        res.json(response)
+        res.status(200)
+    } catch (err) {
+        res.send(err)
+        res.status(500)
+    }
+
+    res.end()
 })
 
 app.use('/.netlify/functions/api', router)
