@@ -21,9 +21,12 @@ router.get('/scouting/results', (req, res) => {
 
 router.post('/scouting/results', (req, res) => {
     
-    let json = require('./credentials.json');
-    console.log(json, 'the json obj');
+    const fs = require('fs');
 
+    let rawdata = fs.readFileSync('./credentials.json');
+    let credentials = JSON.parse(rawdata);
+    console.log(credentials)
+    
     let scores = req.body.scores
 
     const googleSheetsReq = googleSheets.addRowsToSheet([[
