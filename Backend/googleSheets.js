@@ -38,6 +38,7 @@ async function addRowsToSheet(rows) {
       });
       
       console.log(response)
+      console.log("request succeed")
     }
     catch (err) {
       console.log(err)
