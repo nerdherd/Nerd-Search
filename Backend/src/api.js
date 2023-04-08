@@ -1,6 +1,5 @@
 const express = require('express')
 const serverless = require('serverless-http')
-const cors = require('cors')
 
 const googleSheets = require('./googleSheets')
 
@@ -9,16 +8,21 @@ const router = express.Router()
 
 app.use(express.json())
 
-app.use(cors({
-    origin: 'https://nerdherd.github.io'
-}));
-  
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 
 router.get('/scouting/results', (req, res) => {
     res.send('hi')
 })
 
 router.post('/scouting/results', (req, res) => {
+
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+
     let scores = req.body.scores
     googleSheets.addRowsToSheet([[
         scores[0].scoreValue,
@@ -28,8 +32,6 @@ router.post('/scouting/results', (req, res) => {
         scores[4].scoreValue,
         scores[5].scoreValue,
     ]])
-
-    res.status(500)
 })
 
 app.use('/.netlify/functions/api', router)
