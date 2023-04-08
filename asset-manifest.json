@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Nerd-Search/static/css/main.0b8705e3.css",
+    "main.js": "/Nerd-Search/static/js/main.d2c2f370.js",
+    "static/js/787.2d181891.chunk.js": "/Nerd-Search/static/js/787.2d181891.chunk.js",
+    "index.html": "/Nerd-Search/index.html",
+    "main.0b8705e3.css.map": "/Nerd-Search/static/css/main.0b8705e3.css.map",
+    "main.d2c2f370.js.map": "/Nerd-Search/static/js/main.d2c2f370.js.map",
+    "787.2d181891.chunk.js.map": "/Nerd-Search/static/js/787.2d181891.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0b8705e3.css",
+    "static/js/main.d2c2f370.js"
+  ]
+}
