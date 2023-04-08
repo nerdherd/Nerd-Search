@@ -1,16 +1,18 @@
 const express = require('express')
-const app = express()
+const serverless = require('serverless-http')
+
 const googleSheets = require('./googleSheets')
+
+const app = express()
+const router = express.Router()
 
 app.use(express.json())
 
-app.get('/api/scouting/results', (req, res) => {
+router.get('/scouting/results', (req, res) => {
     res.send('hi')
 })
 
-app.post('/api/scouting/results', (req, res) => {
-    res.send('hi')    
-
+router.post('/scouting/results', (req, res) => {
     let scores = req.body.scores
     googleSheets.addRowsToSheet([[
         scores[0].scoreValue,
@@ -20,6 +22,10 @@ app.post('/api/scouting/results', (req, res) => {
         scores[4].scoreValue,
         scores[5].scoreValue,
     ]])
+
+    res.status(500)
 })
 
-module.exports = app
+app.use('/.netlify/functions/api', router)
+
+module.exports.handler = serverless(app)
