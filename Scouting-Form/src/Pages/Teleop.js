@@ -58,11 +58,10 @@ function Teleop({matchInfo, setMatchInfo, getScore, incrementScore, completedFor
             <div className="radioInput">
                 <p><b id="intakeLocationHeader">Where does the robot intake game pieces?</b></p>
                 <div onChange={handleChange} >
-                    <input type="checkbox" value="floor" name="intakeLocation" /> floor
-                    <input type="checkbox" value="singleSubstation" name="intakeLocation" /> single substation
-                    <input type="checkbox" value="doubleSubstationD" name="intakeLocation" /> double substation: drop
-                    <input type="checkbox" value="doubleSubstationS" name="intakeLocation" /> double substation: shelf
-                    <input type="checkbox" value="none" name="intakeLocation" /> no intake
+                    <input type="checkbox" value="floor" name="intakeLocation" /> Floor
+                    <input type="checkbox" value="drop" name="intakeLocation" /> Drop
+                    <input type="checkbox" value="shelf" name="intakeLocation" /> Shelf
+                    <input type="checkbox" value="none" name="intakeLocation" /> No Intake
                 </div>
             </div>
 
