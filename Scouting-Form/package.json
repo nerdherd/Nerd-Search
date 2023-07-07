@@ -41,5 +41,11 @@
   "devDependencies": {
     "gh-pages": "^5.0.0",
     "react-router-dom": "^6.8.2"
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "rules": {
+      "react-hooks/exhaustive-deps": "off"
+    }
   }
 }

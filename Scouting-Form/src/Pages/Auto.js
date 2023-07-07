@@ -9,7 +9,7 @@ function Auto({getScore, incrementScore, completedForms, setCompletedForms}) {
 
     useEffect(() => {
         if (completedForms.scouterInfo !== true) {
-            navigate('/scouterInfo')
+            navigate('/')
         }
     })
 
@@ -19,7 +19,7 @@ function Auto({getScore, incrementScore, completedForms, setCompletedForms}) {
             ...completedForms,
             autonomous: false
         })
-        navigate('/')
+        navigate('/scouterInfo')
     }
 
     function handleSubmit(event) {
