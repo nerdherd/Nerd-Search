@@ -33,7 +33,7 @@ function ScouterInfo({scouterInfo, setScouterInfo, completedForms, setCompletedF
     
     return (
         <div id='scouterInfo'>
-            <h1 id='title'>BETA: 687 Scouting App 2023</h1>
+            <h1 id='title'>687 Scouting App 2023</h1>
 
             <p id="usernameHeader"><b>Name (First Last)</b></p>
             <input
