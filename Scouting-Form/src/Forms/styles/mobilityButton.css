@@ -16,3 +16,7 @@ button {
     background-color: grey;
     font-weight: bold
 }
+
+.mobility-button {
+    font-size: 15px; /* Adjust the font size as needed */
+  }

@@ -15,7 +15,7 @@ function PenaltiesButton({scoreType, getScore, incrementScore}) {
         penaltyStatus = "Some"
     } else if (getScore(scoreType) == 2) {
         buttonColor = "egregious"
-        penaltyStatus = "Egregious (yellow/red card)"
+        penaltyStatus = "Yellow/Red Card"
     }
 
     return (     

@@ -16,10 +16,16 @@ function MobilityButton({scoreType, getScore, incrementScore, isAuto}) {
 
     return (     
         <>
-            <button onClick={() => incrementScore(scoreType, increment)} id={buttonColor}>{buttonText}</button>
-        </>
-    );
-  }
+            <button 
+            onClick={() => incrementScore(scoreType, increment)} 
+            id={buttonColor}
+            className="mobility-button" // Add the CSS class here
+            >
+              {buttonText}
+            </button>
+          </>
+        );
+      }
   
   export default MobilityButton;
   

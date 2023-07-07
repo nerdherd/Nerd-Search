@@ -12,3 +12,7 @@
     width: 50%;
     background-color: #77dd77;
 }
+
+.charge-button {
+    font-size: 15px; /* Adjust the font size as needed */
+  }

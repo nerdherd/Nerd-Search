@@ -20,10 +20,16 @@ function ChargeStation({scoreType, getScore, incrementScore}) {
 
     return (     
         <>
-            <button onClick={() => incrementScore(scoreType, increment)} id={buttonColor}>{stationStatus}</button>
-        </>
-    );
-  }
+            <button onClick={() => incrementScore(scoreType, increment)} 
+            id={buttonColor}
+            className="charge-button" // Add the CSS class here
+            >
+              {stationStatus}
+            </button>
+          </>
+        );
+      }
+
   
   export default ChargeStation;
   
