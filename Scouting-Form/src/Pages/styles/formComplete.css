@@ -9,6 +9,12 @@
     align-content: center;
 }
 
+#qrCode {
+    height: "auto";
+    width: "90%";
+    margin: "10 auto";
+}
+
 p {
     width: 80%
 }
